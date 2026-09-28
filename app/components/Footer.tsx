@@ -74,7 +74,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:kakrabalab@tulane.edu"
+                  href="mailto:Skakraba@tulane.edu"
                   className="hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300"
                 >
                   Skakraba@tulane.edu
@@ -82,7 +82,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+15045551234"
+                  href="tel:+14236729998"
                   className="hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300"
                 >
                   +1 (423) 672-9998
