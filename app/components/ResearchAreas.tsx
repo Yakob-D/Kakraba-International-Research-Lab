@@ -35,8 +35,10 @@ const researchAreas = [
 export default function ResearchAreas() {
   return (
     <div>
-      <h1 className="text-5xl ml-10">Research Areas</h1>
-      <ResearchAreaMarquee items={researchAreas} />
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl px-4 sm:px-6 md:px-10">Research Areas</h1>
+      <div className="px-4 sm:px-6 md:px-10">
+        <ResearchAreaMarquee items={researchAreas} />
+      </div>
     </div>
   );
 }

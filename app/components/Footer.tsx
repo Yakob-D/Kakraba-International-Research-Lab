@@ -34,11 +34,11 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative mt-60 scroll-mt-28 px-10 pb-5 border-t border-black/10 dark:border-white/10 pt-5">
+    <footer id="contact" className="relative mt-24 sm:mt-32 md:mt-48 lg:mt-60 scroll-mt-28 px-4 sm:px-6 md:px-10 pb-5 border-t border-black/10 dark:border-white/10 pt-5">
 
       <div className="mx-auto">
-        <div className="grid grid-cols-1 text-left md:grid-cols-4">
-          <div className="border-r pr-10 mr-10 border-black/10 dark:border-white/10">
+        <div className="grid grid-cols-1 gap-8 text-left md:grid-cols-4 md:gap-0">
+          <div className="md:border-r md:pr-10 md:mr-10 border-black/10 dark:border-white/10">
             <h2 className="text-xl font-bold">
               Kakraba International Research Lab
             </h2>
@@ -49,7 +49,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="border-r pr-10 mr-10 border-black/10 dark:border-white/10">
+          <div className="md:border-r md:pr-10 md:mr-10 border-black/10 dark:border-white/10">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-black/50 dark:text-white/50">
               Quick Links
             </h3>
@@ -67,7 +67,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="border-r pr-10 mr-10 border-black/10 dark:border-white/10">
+          <div className="md:border-r md:pr-10 md:mr-10 border-black/10 dark:border-white/10">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-black/50 dark:text-white/50">
               Contact
             </h3>

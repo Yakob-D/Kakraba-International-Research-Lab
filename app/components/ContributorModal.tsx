@@ -145,7 +145,7 @@ export default function ContributorModal() {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="w-56 whitespace-nowrap px-6 py-3 border border-black dark:border-white/70 hover:bg-black/10 dark:hover:bg-white/10 transition-color duration-300 rounded-full"
+        className="w-full sm:w-56 whitespace-nowrap px-6 py-3 border border-black dark:border-white/70 hover:bg-black/10 dark:hover:bg-white/10 transition-color duration-300 rounded-full"
       >
         Become a contributor
       </button>
@@ -156,7 +156,7 @@ export default function ContributorModal() {
           onClick={close}
         >
           <div
-            className="relative max-h-full w-full max-w-lg overflow-y-auto rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900 p-8 shadow-xl"
+            className="relative max-h-full w-full max-w-lg overflow-y-auto rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900 p-5 sm:p-8 shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button
