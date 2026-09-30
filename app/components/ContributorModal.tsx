@@ -8,8 +8,7 @@ type FormState = {
   name: string;
   credential: string;
   role: string;
-  bio: string;
-  imageAlt: string;
+  reason: string;
   initials: string;
 };
 
@@ -17,27 +16,32 @@ const initialState: FormState = {
   name: "",
   credential: "",
   role: "",
-  bio: "",
-  imageAlt: "",
+  reason: "",
   initials: "",
 };
 
-const ALLOWED_IMAGE_TYPES = [
-  "image/png",
-  "image/jpeg",
-  "image/webp",
-  "image/gif",
+const ALLOWED_CV_TYPES = [
+  "application/pdf",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 ];
-const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
+const ALLOWED_CV_EXTENSIONS = [".pdf", ".doc", ".docx"];
+const MAX_CV_BYTES = 5 * 1024 * 1024;
 
 const inputClasses =
   "mt-1 w-full rounded-lg border border-black/20 dark:border-white/20 bg-transparent px-3 py-2 text-sm outline-none focus:border-black dark:focus:border-white";
 
+const formatFileSize = (bytes: number) => {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+};
+
 export default function ContributorModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [form, setForm] = useState<FormState>(initialState);
-  const [imageFile, setImageFile] = useState<File | null>(null);
-  const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);
+  const [cvFile, setCvFile] = useState<File | null>(null);
+  const [cvPreviewUrl, setCvPreviewUrl] = useState<string | null>(null);
   const [isDraggingFile, setIsDraggingFile] = useState(false);
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
@@ -47,17 +51,17 @@ export default function ContributorModal() {
 
   useEffect(() => {
     return () => {
-      if (imagePreviewUrl) URL.revokeObjectURL(imagePreviewUrl);
+      if (cvPreviewUrl) URL.revokeObjectURL(cvPreviewUrl);
     };
-  }, [imagePreviewUrl]);
+  }, [cvPreviewUrl]);
 
   const close = () => {
     setIsOpen(false);
     setStatus("idle");
     setError(null);
     setForm(initialState);
-    setImageFile(null);
-    setImagePreviewUrl((prev) => {
+    setCvFile(null);
+    setCvPreviewUrl((prev) => {
       if (prev) URL.revokeObjectURL(prev);
       return null;
     });
@@ -69,29 +73,29 @@ export default function ContributorModal() {
       setForm((prev) => ({ ...prev, [field]: e.target.value }));
     };
 
-  const applyImageFile = (file: File | null) => {
+  const applyCvFile = (file: File | null) => {
     if (!file) return;
 
-    if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
-      setError("Image must be a PNG, JPEG, WEBP, or GIF file.");
+    if (!ALLOWED_CV_TYPES.includes(file.type)) {
+      setError("CV must be a PDF or Word document (.pdf, .doc, .docx).");
       return;
     }
-    if (file.size > MAX_IMAGE_BYTES) {
-      setError("Image must be smaller than 5MB.");
+    if (file.size > MAX_CV_BYTES) {
+      setError("CV must be smaller than 5MB.");
       return;
     }
 
     setError(null);
-    setImageFile(file);
-    setImagePreviewUrl((prev) => {
+    setCvFile(file);
+    setCvPreviewUrl((prev) => {
       if (prev) URL.revokeObjectURL(prev);
       return URL.createObjectURL(file);
     });
   };
 
-  const removeImage = () => {
-    setImageFile(null);
-    setImagePreviewUrl((prev) => {
+  const removeCv = () => {
+    setCvFile(null);
+    setCvPreviewUrl((prev) => {
       if (prev) URL.revokeObjectURL(prev);
       return null;
     });
@@ -99,13 +103,13 @@ export default function ContributorModal() {
   };
 
   const handleFileInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    applyImageFile(e.target.files?.[0] ?? null);
+    applyCvFile(e.target.files?.[0] ?? null);
   };
 
   const handleDrop = (e: DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     setIsDraggingFile(false);
-    applyImageFile(e.dataTransfer.files?.[0] ?? null);
+    applyCvFile(e.dataTransfer.files?.[0] ?? null);
   };
 
   const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
@@ -117,11 +121,10 @@ export default function ContributorModal() {
       const body = new FormData();
       body.append("name", form.name);
       body.append("role", form.role);
-      body.append("bio", form.bio);
+      body.append("reason", form.reason);
       body.append("credential", form.credential);
-      body.append("imageAlt", form.imageAlt);
       body.append("initials", form.initials);
-      if (imageFile) body.append("image", imageFile);
+      if (cvFile) body.append("cv", cvFile);
 
       const res = await fetch("/api/contributors", {
         method: "POST",
@@ -147,7 +150,7 @@ export default function ContributorModal() {
         onClick={() => setIsOpen(true)}
         className="w-full sm:w-56 whitespace-nowrap px-6 py-3 border border-black dark:border-white/70 hover:bg-black/10 dark:hover:bg-white/10 transition-color duration-300 rounded-full"
       >
-        Become a contributor
+        Join our team
       </button>
 
       {isOpen && (
@@ -188,10 +191,9 @@ export default function ContributorModal() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4 text-left">
-                <h2 className="text-2xl font-semibold">Become a Contributor</h2>
+                <h2 className="text-2xl font-semibold">Join Our Team</h2>
                 <p className="text-sm text-black/60 dark:text-white/60">
-                  Fill in your details below. This will be used to display your
-                  profile on the People page.
+                  Fill in your details below. Our team will review your submission and reach back if we're interested.
                 </p>
 
                 <div>
@@ -238,21 +240,21 @@ export default function ContributorModal() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium" htmlFor="bio">
-                    Bio *
+                  <label className="block text-sm font-medium" htmlFor="reason">
+                    Why are you interested in joining us?
                   </label>
                   <textarea
-                    id="bio"
+                    id="reason"
                     required
                     rows={4}
-                    value={form.bio}
-                    onChange={handleChange("bio")}
+                    value={form.reason}
+                    onChange={handleChange("reason")}
                     className={inputClasses}
                   />
                 </div>
 
                 <div>
-                  <span className="block text-sm font-medium">Photo</span>
+                  <span className="block text-sm font-medium">CV / Resume</span>
                   <div
                     onClick={() => fileInputRef.current?.click()}
                     onDragOver={(e) => {
@@ -270,38 +272,50 @@ export default function ContributorModal() {
                     <input
                       ref={fileInputRef}
                       type="file"
-                      accept={ALLOWED_IMAGE_TYPES.join(",")}
+                      accept={[...ALLOWED_CV_TYPES, ...ALLOWED_CV_EXTENSIONS].join(
+                        ","
+                      )}
                       onChange={handleFileInputChange}
                       className="hidden"
                     />
 
-                    {imagePreviewUrl ? (
+                    {cvFile ? (
                       <>
-                        <img
-                          src={imagePreviewUrl}
-                          alt="Selected preview"
-                          className="h-24 w-24 rounded-full object-cover"
-                        />
-                        <p className="text-sm text-black/60 dark:text-white/60">
-                          {imageFile?.name}
+                        <span className="text-3xl">📄</span>
+                        <p className="text-sm font-medium">{cvFile.name}</p>
+                        <p className="text-xs text-black/50 dark:text-white/50">
+                          {formatFileSize(cvFile.size)}
                         </p>
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            removeImage();
-                          }}
-                          className="text-sm underline text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
-                        >
-                          Remove photo
-                        </button>
+                        <div className="flex items-center gap-3 text-sm">
+                          {cvPreviewUrl && (
+                            <a
+                              href={cvPreviewUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="underline text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
+                            >
+                              Preview
+                            </a>
+                          )}
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              removeCv();
+                            }}
+                            className="underline text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white"
+                          >
+                            Remove
+                          </button>
+                        </div>
                       </>
                     ) : (
                       <p className="text-sm text-black/60 dark:text-white/60">
-                        Drag and drop a photo here, or{" "}
+                        Drag and drop your CV here, or{" "}
                         <span className="underline">click to browse</span>
                         <br />
-                        PNG, JPEG, WEBP, or GIF — up to 5MB
+                        PDF, DOC, or DOCX — up to 5MB
                       </p>
                     )}
                   </div>
@@ -310,24 +324,9 @@ export default function ContributorModal() {
                 <div>
                   <label
                     className="block text-sm font-medium"
-                    htmlFor="imageAlt"
-                  >
-                    Photo Alt Text
-                  </label>
-                  <input
-                    id="imageAlt"
-                    value={form.imageAlt}
-                    onChange={handleChange("imageAlt")}
-                    className={inputClasses}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    className="block text-sm font-medium"
                     htmlFor="initials"
                   >
-                    Initials (used if no photo)
+                    Initials
                   </label>
                   <input
                     id="initials"

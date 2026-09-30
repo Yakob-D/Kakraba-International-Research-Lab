@@ -4,7 +4,7 @@ import ContributorModal from "./ContributorModal"
 export default function Hero() {
   return (
     <div className="relative h-full w-full overflow-hidden flex flex-col align-center justify-between text-center mx-auto mt-10 mb-24 sm:mb-32 md:mb-40 px-4 sm:px-6">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Kakraba International Research Lab</h1>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-black via-orange-700 to-red-900 dark:from-white/5 via-orange-400 to-red-900 bg-clip-text text-transparent">Kakraba International Research Lab</h1>
       <h3 className="text-base sm:text-xl md:text-2xl lg:text-3xl mt-5 sm:mt-6 md:mt-7">
         Advancing Artificial Intelligence, Biostatistics, and data-driven
         discovery

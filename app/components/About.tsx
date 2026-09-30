@@ -5,7 +5,6 @@ export default function About() {
 
       <div className="mt-10 md:mt-20 flex flex-col md:flex-row gap-8 md:gap-20 text-left">
         <div className="relative flex-1">
-          <div className="absolute -top-10 -left-0 -z-10 h-30 w-30 rounded-full bg-fuchsia-400/40 blur-3xl" />
           <div className="h-full min-h-64 rounded-2xl border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/5 p-6 shadow-md backdrop-blur-xl">
             <h1 className="text-2xl font-semibold mb-5">About Us</h1>
             <p className="text-lg text-black/50 dark:text-white/50 pb-5">
@@ -28,8 +27,8 @@ export default function About() {
         </div>
 
         <div className="relative flex-1">
-          <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-sky-400/40 blur-3xl" />
-          <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-fuchsia-400/40 blur-3xl" />
+          <div className="absolute -top-10 -right-10 -z-10 h-30 w-30 rounded-full bg-red-400/40 blur-3xl" />
+          <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-orange-400/10 blur-3xl" />
           <div className="h-full min-h-64 rounded-2xl border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/5 p-6 shadow-md backdrop-blur-xl">
             <h1 className="text-2xl font-semibold mb-5">Our Mission</h1>
             <p className="text-lg text-black/50 dark:text-white/50 pb-5 mb-5 border-b border-black/10 dark:border-white/10">
@@ -64,7 +63,6 @@ export default function About() {
         </div>
 
         <div className="relative flex-1">
-          <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-sky-400/40 blur-3xl" />
           <div className="h-full min-h-64 rounded-2xl border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/5 p-6 shadow-md backdrop-blur-xl">
             <h1 className="text-2xl font-semibold mb-5">What We Focus On</h1>
             <h3 className="font-bold text-lg text-black dark:text-white">
