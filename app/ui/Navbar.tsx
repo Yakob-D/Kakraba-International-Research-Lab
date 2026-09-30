@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 const links = [
     { label: "HOME", href: "/"},
@@ -14,6 +15,8 @@ const links = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
+    const pathname = usePathname()
+    const isActive = (href: string) => href === pathname
 
     return (
         <div className="mt-5 sticky top-5 z-50 isolate [transform:translateZ(0)] px-4 sm:px-6">
@@ -26,7 +29,16 @@ export default function Navbar() {
                     <ul className="hidden items-center justify-around md:flex md:flex-1">
                         {links.map((link) => (
                             <li key={link.href}>
-                                <Link href={link.href} className="text-xs sm:text-sm lg:text-lg font-bold hover:text-black/60 dark:hover:text-white/60 transition-color duration-300">{link.label}</Link>
+                                <Link
+                                    href={link.href}
+                                    className={`rounded-lg px-3 py-1.5 text-xs sm:text-sm lg:text-lg font-bold transition-colors duration-300 ${
+                                        isActive(link.href)
+                                            ? "bg-black/10 dark:bg-white/10"
+                                            : "hover:text-black/60 dark:hover:text-white/60"
+                                    }`}
+                                >
+                                    {link.label}
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -55,7 +67,11 @@ export default function Navbar() {
                                 <Link
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="block py-2 text-sm font-bold hover:text-black/60 dark:hover:text-white/60 transition-color duration-300"
+                                    className={`block rounded-xl px-3 py-2 text-sm font-bold transition-colors duration-300 ${
+                                        isActive(link.href)
+                                            ? "bg-black text-white dark:bg-white dark:text-black"
+                                            : "hover:text-black/60 dark:hover:text-white/60"
+                                    }`}
                                 >
                                     {link.label}
                                 </Link>
