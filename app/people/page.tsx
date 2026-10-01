@@ -27,7 +27,7 @@ const people = [
     role: "Graduate Research Assistant | Kakraba Research Group",
     imageSrc: "/SamuelDibabu/SamuelDibabu.JPG",
     initials: "SD",
-    bio: "Samuel is a Masters student in Biostatistics at Tulane University, specializing in Data Science and Statistical Machine Learning. His research focuses on statistical machine learning methods and explainable AI workflows to enhance clinical risk stratification and personalized medicine. As a Graduate Research Assistant at Kakraba Research Group, Samuel applies advanced statistical and predictive modeling techniques to improve disease diagnosis across clinical and public health contexts. He is particularly interested at the intersection of statistics, equitable AI, and diagnostic clinical imaging. He is dedicated to creating interpretable, data-driven tools that translate complex algorithms into practical, everyday clinical decisions.",
+    bio: "Samuel is a Masters student in Biostatistics at Tulane University, specializing in Data Science and Statistical Machine Learning. He holds a bachelor's degree in Medical Imaging. His research focuses on statistical machine learning methods and explainable AI workflows to enhance clinical risk stratification and personalized medicine. As a Graduate Research Assistant at Kakraba Research Group, Samuel applies advanced statistical and predictive modeling techniques to improve disease diagnosis across clinical and public health contexts. He is particularly interested at the intersection of statistics, equitable AI, and diagnostic clinical imaging. He is dedicated to creating interpretable, data-driven tools that translate complex algorithms into practical, everyday clinical decisions.",
     cv: "/SamuelDibabu/SamuelDibabu-CV.pdf"
   },
   {
@@ -46,6 +46,15 @@ const people = [
     initials: "FA",
     bio: "Faustina Asante is a Ph.D. student in Mathematical Sciences with a concentration in Statistics at Northern Illinois University, where she earned an M.S. in Statistics and an M.S. in Artificial Intelligence in Business. Her research interests span biostatistics, Bayesian nonparametric methods, machine learning, and statistical computing, with an emphasis on developing and applying rigorous quantitative methods to complex health and population data. As a Doctoral Research Assistant with the Kakraba Research Group, Faustina contributes to data-driven research involving large-scale health and clinical datasets. Her research interests include predictive analytics, disease risk modeling, population health surveillance, and the application of advanced statistical and machine-learning methods to public health research. Her broader research agenda lies at the intersection of statistics, explainable and equitable artificial intelligence, and public health. She is particularly interested in developing interpretable and data-driven approaches to understanding health disparities and supporting evidence-based decision-making, with applications in chronic disease, maternal health, and population health.",
     cv: "/FaustinaAsante/Faustina-CV.pdf"
+  },
+  {
+    name: "Yakob Dibabu Assefa",
+    credential: "SE",
+    role: "Software Research Assistant | Kakraba Research Group",
+    imageSrc: "/Yakob/Yakob.png",
+    initials: "YD",
+    bio: "Yakob Dibabu is a final-year Software Engineering student at HiLCoE School of Computer Science & Technology. His expertise spans full-stack web development, building front-end and back-end systems with React, Next.js, and Node.js. He also has solid experience in native iOS development with Swift and SwiftUI. He has strong proficiency in data structures and algorithms, sharpened through a year-long intensive program in competitive problem solving. At the Kakraba International Research Lab, he develops and maintains the lab's software products. He also builds the interfaces that turn the team's AI and machine learning tools into applications people can use. His research interests lie at the intersection of software engineering and artificial intelligence, especially deploying AI on mobile devices for health and making machine learning reliable and accessible in real-world settings.",
+    cv: "/Yakob/YAKOB-CV.pdf",
   },
   {
     name: "Aaron Enos",
