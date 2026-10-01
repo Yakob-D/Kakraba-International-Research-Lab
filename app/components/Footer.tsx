@@ -4,6 +4,8 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "People", href: "/people" },
   { label: "Research", href: "/researches" },
+  { label: "Publications", href: "/publications" },
+  { label: "Conferences", href: "/conferences" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#contact" },
 ];
@@ -34,13 +36,13 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative mt-24 sm:mt-32 md:mt-48 lg:mt-60 scroll-mt-28 px-4 sm:px-6 md:px-10 pb-5 border-t border-black/10 dark:border-white/10 pt-5">
+    <footer id="contact" className="relative mt-20 sm:mt-32 md:mt-48 lg:mt-60 scroll-mt-28 px-4 sm:px-6 md:px-10 pb-5 border-t border-black/10 dark:border-white/10 pt-5">
 
       <div className="mx-auto">
         <div className="grid grid-cols-1 gap-8 text-left md:grid-cols-4 md:gap-0">
           <div className="md:border-r md:pr-10 md:mr-10 border-black/10 dark:border-white/10">
             <h2 className="text-xl font-bold">
-              Kakraba International Research Lab
+              Kakraba Research Group
             </h2>
             <p className="mt-3 text-sm text-black/60 dark:text-white/60">
               Tulane University — advancing artificial intelligence,
@@ -74,10 +76,10 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:Skakraba@tulane.edu"
+                  href="mailto:Kakrabaresearchgroup@gmail.com"
                   className="hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300"
                 >
-                  Skakraba@tulane.edu
+                  Kakrabaresearchgroup@gmail.com
                 </a>
               </li>
               <li>

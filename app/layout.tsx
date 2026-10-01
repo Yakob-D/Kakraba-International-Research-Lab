@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kakraba International Research Lab",
+  title: "Kakraba Research Group",
   description: "Tulane Research Lab Website",
 };
 

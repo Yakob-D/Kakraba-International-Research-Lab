@@ -22,7 +22,6 @@ export default function ResearchAreaMarquee({ items }: ResearchAreaMarqueeProps)
     const firstCopyRef = useRef<HTMLDivElement>(null)
     const offsetRef = useRef(0)
     const copyWidthRef = useRef(0)
-    const maxDragOffsetRef = useRef(0)
     const draggingRef = useRef(false)
     const pointerIdRef = useRef<number | null>(null)
     const dragStartXRef = useRef(0)
@@ -48,12 +47,7 @@ export default function ResearchAreaMarquee({ items }: ResearchAreaMarqueeProps)
         const measure = () => {
             if (firstCopyRef.current) {
                 copyWidthRef.current = firstCopyRef.current.offsetWidth
-            }
-            if (containerRef.current) {
-                maxDragOffsetRef.current = Math.max(
-                    0,
-                    copyWidthRef.current - containerRef.current.offsetWidth
-                )
+                normalizeOffset()
             }
         }
         measure()
@@ -89,20 +83,6 @@ export default function ResearchAreaMarquee({ items }: ResearchAreaMarqueeProps)
     }, [])
 
     const handlePointerDown = (e: React.PointerEvent) => {
-        const width = copyWidthRef.current
-        const maxOffset = maxDragOffsetRef.current
-
-        // offsetRef can be sitting in the autoplay "wrap" zone (between the
-        // last card and the duplicated first card) when the drag starts.
-        // Snap to whichever real boundary (last card vs. first card) is closer
-        // instead of jumping straight to the last-card bound every time.
-        if (width > 0 && offsetRef.current > maxOffset) {
-            const distToLastCard = offsetRef.current - maxOffset
-            const distToFirstCard = width - offsetRef.current
-            offsetRef.current = distToLastCard <= distToFirstCard ? maxOffset : 0
-            applyOffset()
-        }
-
         pointerIdRef.current = e.pointerId
         dragStartXRef.current = e.clientX
         dragStartOffsetRef.current = offsetRef.current
@@ -110,8 +90,8 @@ export default function ResearchAreaMarquee({ items }: ResearchAreaMarqueeProps)
         // Don't capture the pointer or mark this as a drag yet. Capturing
         // immediately would retarget the eventual compatibility "click"
         // event to this track element instead of whatever's actually under
-        // the cursor (e.g. a "Read More" link), silently breaking normal
-        // clicks. We only promote this to a drag once real movement happens.
+        // the cursor, silently breaking normal clicks. We only promote this
+        // to a drag once real movement happens.
     }
 
     const handlePointerMove = (e: React.PointerEvent) => {
@@ -126,11 +106,10 @@ export default function ResearchAreaMarquee({ items }: ResearchAreaMarqueeProps)
             e.currentTarget.setPointerCapture(e.pointerId)
         }
 
-        const nextOffset = dragStartOffsetRef.current + delta
-        offsetRef.current = Math.min(
-            Math.max(nextOffset, 0),
-            maxDragOffsetRef.current
-        )
+        // The track holds two identical copies, so wrapping the offset
+        // modulo one copy's width lets the user drag endlessly either way.
+        offsetRef.current = dragStartOffsetRef.current + delta
+        normalizeOffset()
         applyOffset()
     }
 
