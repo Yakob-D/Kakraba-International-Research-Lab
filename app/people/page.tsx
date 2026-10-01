@@ -156,6 +156,7 @@ function categoryOf(person: (typeof people)[number]): string {
   if (/Assistant Professor/i.test(role)) return "Head of the Lab";
   if (/Doctoral Research Assistant/i.test(role)) return "Doctoral Research Assistants";
   if (/Legal Research Assistant/i.test(role)) return "Legal Research Assistant";
+  if (/Software Research Assistant/i.test(role)) return "Software Research Assistant";
   return "Graduate Research Assistants";
 }
 
@@ -164,6 +165,7 @@ const categoryOrder = [
   "Doctoral Research Assistants",
   "Graduate Research Assistants",
   "Legal Research Assistant",
+  "Software Research Assistant",
 ];
 
 const groups = categoryOrder
