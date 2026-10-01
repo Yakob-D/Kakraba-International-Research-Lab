@@ -33,7 +33,7 @@ const people = [
   {
     name: "Nkemjika Grace Nnama",
     credential: "MSc",
-    role: "Graduate Research Assistant | Kakraba Research Group",
+    role: "Doctoral Research Assistant | Kakraba Research Group",
     imageSrc: "/NkemjikaGrace/NkemjikaGrace.jpeg",
     initials: "NG",
     bio: "Nkem is a doctoral student in the Interdisciplinary Program in Aging Studies at Tulane University and a Graduate Research Assistant in Kakraba’s International Research Lab. Her research interests lie at the intersection of Neuroscience, Alzheimer’s disease, Mitochondrial biology, and drug discovery, with a particular interest in understanding biological mechanisms that contribute to age-related neurodegeneration. As regards her interest in drug discovery for AD, she seeks to identify and evaluate therapeutic compounds targeting mechanisms associated with neuro degeneration using computational approaches, bioinformatics and machine learning. Beyond therapeutic discovery, Nkem’s research interests extend to the translation of biomedical discoveries into equitable health outcomes. She is interested in questions surrounding access to emerging Alzheimer’s therapies, health disparities and the roles of health policy in determining who benefits from advances in biomedical research.",
@@ -66,7 +66,7 @@ const people = [
   {
     name: "Helena Okyere",
     credential: "PhD Student in Chemistry",
-    role: "Graduate Research Assistant | Kakraba Research Group",
+    role: "Doctoral Research Assistant | Kakraba Research Group",
     imageSrc: "/Helena/Helena.jpg",
     initials: "HO",
     bio: "Helena Okyere is a PhD student in Chemistry at Tulane University with interests in chemical physics and theoretical and computational chemistry. Her research centers on vibrational energy transport, intramolecular energy redistribution, and relaxation in molecular systems. She uses both quantum mechanical and classical approaches to study how energy moves through molecules and interacts with their surroundings. Her work involves electronic structure calculations, molecular dynamics simulations, and data analysis using tools such as Gaussian, GROMACS, MATLAB, and Python. At Kakraba Research Group, she brings a physical and computational science perspective to interdisciplinary work in molecular modeling and biophysics.",
