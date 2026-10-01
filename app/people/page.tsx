@@ -28,6 +28,7 @@ const people = [
     imageSrc: "/SamuelDibabu/SamuelDibabu.JPG",
     initials: "SD",
     bio: "Samuel is a Masters student in Biostatistics at Tulane University, specializing in Data Science and Statistical Machine Learning. His research focuses on statistical machine learning methods and explainable AI workflows to enhance clinical risk stratification and personalized medicine. As a Graduate Research Assistant at Kakraba Research Group, Samuel applies advanced statistical and predictive modeling techniques to improve disease diagnosis across clinical and public health contexts. He is particularly interested at the intersection of statistics, equitable AI, and diagnostic clinical imaging. He is dedicated to creating interpretable, data-driven tools that translate complex algorithms into practical, everyday clinical decisions.",
+    cv: "/SamuelDibabu/SamuelDibabu-CV.pdf"
   },
   {
     name: "Nkemjika Grace Nnama",
@@ -125,6 +126,7 @@ const people = [
   {
     name: "Desmond Yemeh",
     credential: "PharmD",
+    role: "Doctoral Research Assistant | Kakraba Research Group",
     bio: "Desmond Yemeh is a PhD student in Aging Studies at Tulane University whose research lies at the intersection of aging, pharmaceutical sciences, bioinformatics, and data science. His work focuses on medication use and safety in older adults and the application of computational approaches to questions in pharmacotherapy, drug discovery, and aging. His research interests include medication adherence and medication related outcomes in older adults, neurodegenerative diseases, and the clinical, behavioral, and psychosocial factors that influence health across the aging process. He is also interested in community based approaches that promote health, independence, and quality of life among older adults. Desmond's computational research interests include bioinformatics, machine learning, quantitative structure activity relationship (QSAR) modeling, predictive modeling, and pharmacovigilance. He is particularly interested in integrating biological, chemical, clinical, and real world data to investigate drug activity and safety, identify patterns associated with health outcomes, and support drug discovery and therapeutic decision making. Before beginning his doctoral training, Desmond practiced as a clinical pharmacist in Ghana, where he led pharmaceutical services, pharmacovigilance, medication safety, antimicrobial stewardship, and quality improvement initiatives. His clinical pharmacy background continues to shape his research interests and his goal of using computational and data driven approaches to improve medication use, therapeutic outcomes, and health across the aging population.",
     initials: "DY",
     cv: "/Desmond/Desmond-CV.pdf",
