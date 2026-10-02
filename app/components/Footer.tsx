@@ -45,7 +45,7 @@ export default function Footer() {
               Kakraba Research Group
             </h2>
             <p className="mt-3 text-sm text-black/60 dark:text-white/60">
-              Tulane University — advancing artificial intelligence,
+              Advancing artificial intelligence,
               biostatistics, and data-driven discovery to improve public health
               and biomedical outcomes.
             </p>
@@ -129,7 +129,6 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Kakraba International Research
             Lab. All rights reserved.
           </p>
-          <p>Tulane University</p>
         </div>
       </div>
     </footer>
