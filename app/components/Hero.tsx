@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="relative h-full w-full overflow-hidden mx-auto mt-10 mb-24 sm:mb-32 md:mb-40 md:mt-20 px-4 sm:px-6">
       <div className="mx-auto max-w-7xl flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left lg:flex-1">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-black via-orange-700 to-red-900 dark:from-orange-900 dark:via-orange-700 dark:to-white/5 bg-clip-text text-transparent">Kakraba Research Group</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-black via-orange-700 to-red-900 dark:from-white/5 dark:via-orange-800 dark:to-red-900 bg-clip-text text-transparent">Kakraba Research Group</h1>
           <h3 className="text-base sm:text-xl md:text-2xl lg:text-3xl mt-5 sm:mt-6 md:mt-7">
             Advancing Artificial Intelligence, Biostatistics, and data-driven
             discovery
