@@ -149,6 +149,22 @@ const people = [
     bio: "Nyameyie Essuman-Mensah is a Ghanaian and Gambian-qualified lawyer and Master of Laws (LL.M.) student at Pennsylvania State University. She holds an LL.B. from the University of Cape Coast, Ghana, and Barrister-at-Law (BL) qualifications from the Ghana School of Law and the Gambia School of Law. Her legal and academic interests span artificial intelligence governance and ethics, intellectual property, copyright protection for AI-generated works, human rights, and the protection of human dignity in the age of artificial intelligence. At the Kakraba International Research Lab, she contributes to legal research and analysis on emerging issues at the intersection of law, technology, and society, examining legal frameworks, regulatory developments, and ethical considerations surrounding artificial intelligence. Her broader research interests include the relationship between AI and intellectual property rights, the legal protection of AI-generated works, and the development of human centred regulatory frameworks for emerging technologies. She is particularly interested in developing legal approaches that promote technological innovation while safeguarding copyright, human rights, accountability, and human dignity.",
     cv: "/Nyameyie/Nyameyie-CV.pdf",
   },
+  {
+    name: "Blessing Chukwuma",
+    role: "Research Assistant | Kakraba Research Group",
+    imageSrc: "/Blessing/Blessing.png",
+    initials: "BC",
+    bio: "Blessing is an Assessment Coordinator at the University of Arkansas, Fayetteville. Her research interests include women’s health, healthcare optimization are artificial intelligence. In the lab, they contribute to research projects, using tools to address healthcare problems. They are particularly interested in broader scale health economics and research.",
+    cv: "/Blessing/Blessing-CV.pdf"
+  },
+  {
+    name: "Paa-Kwesi Oduro",
+    credential: "MBChB",
+    role: "Graduate Research Assistant | Kakraba Research Group",
+    imageSrc: "/Paa/Paa.jpg",
+    bio: "Paa-Kwesi Oduro is a physician and an MPH candidate in Epidemiology at Tulane University School of Public Health and Tropical Medicine. He earned his MBChB from the University of Ghana Medical School and has practiced at Korle Bu Teaching Hospital and Tetteh Quarshie Memorial Hospital. His research interests include cardiovascular epidemiology, noncommunicable disease prevention, health equity, population health, and the use of data-driven and AI methods in public health. As a Graduate Research Assistant in the Kakraba International Research Lab, Paa-Kwesi contributes clinical and epidemiological expertise to interdisciplinary work in global and population health. His work centers on cardiovascular disease prevention, health disparities, and the role of AI in public health governance. He aspires to become a cardiologist and clinical researcher, integrating clinical medicine, epidemiology, and other branches of public health to advance health outcomes in underserved communities.",
+    cv: "/Paa/Oduro-CV.pdf"
+  }
 ];
 
 function categoryOf(person: (typeof people)[number]): string {
@@ -164,8 +180,8 @@ const categoryOrder = [
   "Head of the Lab",
   "Doctoral Research Assistants",
   "Graduate Research Assistants",
-  "Legal Research Assistant",
   "Software Research Assistant",
+  "Legal Research Assistant",
 ];
 
 const groups = categoryOrder
