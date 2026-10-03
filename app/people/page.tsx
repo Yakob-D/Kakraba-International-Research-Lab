@@ -22,21 +22,21 @@ const people = [
     bio: "Edmund is a doctoral student in Biostatistics at Tulane University. His research interests include artificial intelligence, machine learning, applied statistics, and health data science. His work focuses on developing statistical and machine learning methods for healthcare applications, particularly class imbalance learning, predictive modeling, missing-data imputation, and explainable artificial intelligence. He is particularly interested in integrating advanced statistical methods with artificial intelligence to improve disease prediction, public health analytics, and evidence-based healthcare decision-making."
   },
   {
-    name: "Samuel Dibabu Assefa",
-    credential: "RT",
-    role: "Graduate Research Assistant | Kakraba Research Group",
-    imageSrc: "/SamuelDibabu/SamuelDibabu.JPG",
-    initials: "SD",
-    bio: "Samuel is a Masters student in Biostatistics at Tulane University, specializing in Data Science and Statistical Machine Learning. He holds a bachelor's degree in Medical Imaging. His research focuses on statistical machine learning methods and explainable AI workflows to enhance clinical risk prediction and personalized medicine. As a Graduate Research Assistant at Kakraba Research Group, Samuel engineer and benchmark comprehensive machine learning pipelines in Python and R implementing linear and semi-parametric modeling (Logistic Regression, GAM), discriminant analysis (LDA, QDA), probabilistic methods (Naive Bayes), instance and kernel algorithms (KNN, SVC), tree-based ensembles (Random Forest, Extra Trees), advanced boosting frameworks (AdaBoost, XGBoost, LightGBM, CatBoost), and unsupervised architectures (PCA, clustering) to optimize risk prediction across clinical and public health contexts. He is particularly interested at the intersection of statistics, equitable AI, and diagnostic clinical imaging. He is dedicated to creating interpretable, data-driven tools that translate complex algorithms into practical, everyday clinical decisions",
-    cv: "/SamuelDibabu/SamuelDibabu-CV.pdf"
+    name: "Faustina Asante",
+    role: "Doctoral Research Assistant | Kakraba Research Group",
+    imageSrc: "/FaustinaAsante/FaustinaAsante.jpeg",
+    initials: "FA",
+    bio: "Faustina Asante is a Ph.D. student in Mathematical Sciences with a concentration in Statistics at Northern Illinois University, where she earned an M.S. in Statistics and an M.S. in Artificial Intelligence in Business. Her research interests span biostatistics, Bayesian nonparametric methods, machine learning, and statistical computing, with an emphasis on developing and applying rigorous quantitative methods to complex health and population data. As a Doctoral Research Assistant with the Kakraba Research Group, Faustina contributes to data-driven research involving large-scale health and clinical datasets. Her research interests include predictive analytics, disease risk modeling, population health surveillance, and the application of advanced statistical and machine-learning methods to public health research. Her broader research agenda lies at the intersection of statistics, explainable and equitable artificial intelligence, and public health. She is particularly interested in developing interpretable and data-driven approaches to understanding health disparities and supporting evidence-based decision-making, with applications in chronic disease, maternal health, and population health.",
+    cv: "/FaustinaAsante/Faustina-CV.pdf"
   },
   {
-    name: "Hubert Gagadosu",
+    name: "Desmond Yemeh",
+    credential: "PharmD",
     role: "Doctoral Research Assistant | Kakraba Research Group",
-    imageSrc: "/Hubert/Hubert.jpeg",
-    initials: "",
-    bio: "My research lies at the intersection of biostatistics, epidemiology, and computational health science, with a focus on Bayesian and statistical modeling of complex health, social, genomic, and infectious disease data. I am particularly interested in infectious disease modeling using advanced compartmental frameworks, assessing disease transmission dynamics, evaluating intervention strategies, and understanding factors that influence population health outcomes and health disparities. My work integrates mathematical modeling, statistical inference, and data-driven methods to address public health challenges. More broadly, I am interested in applying quantitative and computational approaches to problems in epidemiology, mathematical biology, and population health, with the goal of supporting evidence-based public health decision-making.",
-    cv: "/Hubert/Hubert-CV.pdf",
+    imageSrc: "/Desmond/Desmond.png",
+    bio: "Desmond Yemeh is a PhD student in Aging Studies at Tulane University whose research lies at the intersection of aging, pharmaceutical sciences, bioinformatics, and data science. His work focuses on medication use and safety in older adults and the application of computational approaches to questions in pharmacotherapy, drug discovery, and aging. His research interests include medication adherence and medication related outcomes in older adults, neurodegenerative diseases, and the clinical, behavioral, and psychosocial factors that influence health across the aging process. He is also interested in community based approaches that promote health, independence, and quality of life among older adults. Desmond's computational research interests include bioinformatics, machine learning, quantitative structure activity relationship (QSAR) modeling, predictive modeling, and pharmacovigilance. He is particularly interested in integrating biological, chemical, clinical, and real world data to investigate drug activity and safety, identify patterns associated with health outcomes, and support drug discovery and therapeutic decision making. Before beginning his doctoral training, Desmond practiced as a clinical pharmacist in Ghana, where he led pharmaceutical services, pharmacovigilance, medication safety, antimicrobial stewardship, and quality improvement initiatives. His clinical pharmacy background continues to shape his research interests and his goal of using computational and data driven approaches to improve medication use, therapeutic outcomes, and health across the aging population.",
+    initials: "DY",
+    cv: "/Desmond/Desmond-CV.pdf",
   },
   {
     name: "Nkemjika Grace Nnama",
@@ -48,12 +48,47 @@ const people = [
     cv: "/NkemjikaGrace/Nkem-CV.pdf"
   },
   {
-    name: "Faustina Asante",
+    name: "Blessing Chukwuma",
+    credential: "MPH",
     role: "Doctoral Research Assistant | Kakraba Research Group",
-    imageSrc: "/FaustinaAsante/FaustinaAsante.jpeg",
-    initials: "FA",
-    bio: "Faustina Asante is a Ph.D. student in Mathematical Sciences with a concentration in Statistics at Northern Illinois University, where she earned an M.S. in Statistics and an M.S. in Artificial Intelligence in Business. Her research interests span biostatistics, Bayesian nonparametric methods, machine learning, and statistical computing, with an emphasis on developing and applying rigorous quantitative methods to complex health and population data. As a Doctoral Research Assistant with the Kakraba Research Group, Faustina contributes to data-driven research involving large-scale health and clinical datasets. Her research interests include predictive analytics, disease risk modeling, population health surveillance, and the application of advanced statistical and machine-learning methods to public health research. Her broader research agenda lies at the intersection of statistics, explainable and equitable artificial intelligence, and public health. She is particularly interested in developing interpretable and data-driven approaches to understanding health disparities and supporting evidence-based decision-making, with applications in chronic disease, maternal health, and population health.",
-    cv: "/FaustinaAsante/Faustina-CV.pdf"
+    imageSrc: "/Blessing/Blessing.jpg",
+    initials: "BC",
+    bio: "Blessing Chukwuma, MPH, is an Assessment Coordinator for Data Analytics and Reporting at the University of Arkansas, Fayetteville, where she applies statistical analysis, data visualization, and population-level assessment methods to support evidence-informed decision-making. Her research interests lie at the intersection of women’s health, health services and outcomes research, health economics, and applied artificial intelligence, with a particular interest in understanding how data-driven approaches can improve healthcare delivery, preventive care, and population health outcomes. Within the Kakraba Research Group, Blessing contributes to interdisciplinary research applying biostatistical, computational, and AI-driven methods to public health and biomedical questions. Her broader research agenda focuses on using real-world and population health data to identify disparities, evaluate healthcare interventions and systems, and develop interpretable decision-support approaches that can inform more efficient and equitable allocation of healthcare resources.",
+    cv: "/Blessing/Blessing-CV.pdf"
+  },
+  {
+    name: "Matthew Quansah",
+    credential: "MPH",
+    role: "Doctoral Research Assistant | Kakraba Research Group",
+    imageSrc: "/Matthew/Matthew.jpg",
+    bio: "Matthew Quansah is a doctoral student at the Indiana University School of Public Health whose research focuses on environmental microbiology, particularly the use of flies as biomonitors of fecal contamination. His work investigates the acquisition and persistence of fecal-associated microorganisms in flies under different environmental conditions, with an emphasis on understanding how temperature and humidity influence microbial carriage. He is particularly interested in applying fly-based monitoring approaches to better characterize fecal contamination in terrestrial environments and complement conventional environmental monitoring methods.",
+    cv: "/Matthew/Matthew-CV.docx",
+  },
+  {
+    name: "Helena Okyere",
+    credential: "PhD Student in Chemistry",
+    role: "Doctoral Research Assistant | Kakraba Research Group",
+    imageSrc: "/Helena/Helena.jpg",
+    initials: "HO",
+    bio: "Helena Okyere is a PhD student in Chemistry at Tulane University with interests in chemical physics and theoretical and computational chemistry. Her research centers on vibrational energy transport, intramolecular energy redistribution, and relaxation in molecular systems. She uses both quantum mechanical and classical approaches to study how energy moves through molecules and interacts with their surroundings. Her work involves electronic structure calculations, molecular dynamics simulations, and data analysis using tools such as Gaussian, GROMACS, MATLAB, and Python. At Kakraba Research Group, she brings a physical and computational science perspective to interdisciplinary work in molecular modeling and biophysics.",
+    cv: "/Helena/Helena-CV.pdf"
+  },
+  {
+    name: "Hubert Gagadosu",
+    role: "Doctoral Research Assistant | Kakraba Research Group",
+    imageSrc: "/Hubert/Hubert.jpeg",
+    initials: "",
+    bio: "My research lies at the intersection of biostatistics, epidemiology, and computational health science, with a focus on Bayesian and statistical modeling of complex health, social, genomic, and infectious disease data. I am particularly interested in infectious disease modeling using advanced compartmental frameworks, assessing disease transmission dynamics, evaluating intervention strategies, and understanding factors that influence population health outcomes and health disparities. My work integrates mathematical modeling, statistical inference, and data-driven methods to address public health challenges. More broadly, I am interested in applying quantitative and computational approaches to problems in epidemiology, mathematical biology, and population health, with the goal of supporting evidence-based public health decision-making.",
+    cv: "/Hubert/Hubert-CV.pdf",
+  },
+  {
+    name: "Samuel Dibabu Assefa",
+    credential: "RT",
+    role: "Graduate Research Assistant | Kakraba Research Group",
+    imageSrc: "/SamuelDibabu/SamuelDibabu.JPG",
+    initials: "SD",
+    bio: "Samuel is a Masters student in Biostatistics at Tulane University, specializing in Data Science and Statistical Machine Learning. He holds a bachelor's degree in Medical Imaging. His research focuses on statistical machine learning methods and explainable AI workflows to enhance clinical risk prediction and personalized medicine. As a Graduate Research Assistant at Kakraba Research Group, Samuel engineer and benchmark comprehensive machine learning pipelines in Python and R implementing linear and semi-parametric modeling (Logistic Regression, GAM), discriminant analysis (LDA, QDA), probabilistic methods (Naive Bayes), instance and kernel algorithms (KNN, SVC), tree-based ensembles (Random Forest, Extra Trees), advanced boosting frameworks (AdaBoost, XGBoost, LightGBM, CatBoost), and unsupervised architectures (PCA, clustering) to optimize risk prediction across clinical and public health contexts. He is particularly interested at the intersection of statistics, equitable AI, and diagnostic clinical imaging. He is dedicated to creating interpretable, data-driven tools that translate complex algorithms into practical, everyday clinical decisions",
+    cv: "/SamuelDibabu/SamuelDibabu-CV.pdf"
   },
   {
     name: "Yakob Dibabu Assefa",
@@ -66,6 +101,7 @@ const people = [
   },
   {
     name: "Aaron Enos",
+    credential: "MD",
     role: "Graduate Research Assistant | Kakraba Research Group",
     imageSrc: "/AaronEnos/AaronEnos.jpg",
     initials: "AE",
@@ -74,20 +110,12 @@ const people = [
   },
   {
     name: "Reginald Mawunyo Ahorlu",
+    credential: "MD",
     role: "Graduate Research Assistant | Kakraba Research Group",
     imageSrc: "/Reginald/ReginaldMawunyo.jpg",
     initials: "RM",
     bio: "Reginald Ahorlu is a physician and MPH student in Epidemiology at the Tulane University School of Public Health and Tropical Medicine. His research interests include cardiovascular disease treatment and prevention, as well as the use of AI in chronic disease prevention. In the lab, he contributes to research projects by combining clinical insight from medical practice with epidemiologic methods, helping to frame relevant research questions, interpret patient and population-level data, and translate findings into practical prevention strategies. He is particularly interested in how successful chronic disease programs in high-income countries can be implemented in low- and middle-income countries.",
     cv: "/Reginald/Reginald-CV.pdf"
-  },
-  {
-    name: "Helena Okyere",
-    credential: "PhD Student in Chemistry",
-    role: "Doctoral Research Assistant | Kakraba Research Group",
-    imageSrc: "/Helena/Helena.jpg",
-    initials: "HO",
-    bio: "Helena Okyere is a PhD student in Chemistry at Tulane University with interests in chemical physics and theoretical and computational chemistry. Her research centers on vibrational energy transport, intramolecular energy redistribution, and relaxation in molecular systems. She uses both quantum mechanical and classical approaches to study how energy moves through molecules and interacts with their surroundings. Her work involves electronic structure calculations, molecular dynamics simulations, and data analysis using tools such as Gaussian, GROMACS, MATLAB, and Python. At Kakraba Research Group, she brings a physical and computational science perspective to interdisciplinary work in molecular modeling and biophysics.",
-    cv: "/Helena/Helena-CV.pdf"
   },
   {
     name: "Kwame Asamoah-Senyah",
@@ -97,14 +125,6 @@ const people = [
     initials: "KA",
     bio: "Kwame Asamoah-Senyah is a Master of Health Administration (MHA) student at Tulane University, with a background in medicine and an interest in healthcare management, health systems, and population health. He holds a Bachelor of Medicine and Bachelor of Surgery (MBBS) from Jiangsu University. His academic and professional interests span healthcare administration, healthcare analytics, health economics, quality improvement, artificial intelligence in healthcare, and the development of effective and equitable health systems. At the Kakraba Research Group, he contributes to research and analytical projects focused on healthcare and population health, applying clinical knowledge, health administration perspectives, data analytics, and artificial intelligence to examine complex healthcare challenges. His work includes exploring how data-driven and AI-enabled approaches can support healthcare research, improve decision-making, enhance health outcomes, and strengthen healthcare delivery. He is particularly interested in research at the intersection of healthcare management, analytics, artificial intelligence, and health systems, with a broader goal of leveraging emerging technologies and evidence-based approaches to contribute to sustainable improvements in healthcare delivery and access, particularly in underserved and resource-constrained settings.",
     cv: "/Kwame/Kwame-CV.pdf"
-  },
-  {
-    name: "Jennifer Ataa Tetteh",
-    role: "Research Assistant | Kakraba Research Group",
-    imageSrc: "/Jennifer/Jennifer.jpg",
-    initials: "JA",
-    bio: "Jennifer Ataa Tetteh holds a B.Sc. in Nutrition and Dietetics from the University of Cape Coast, Ghana, where she graduated with First Class Honours. Her research interests center on cognitive health, healthy aging, life-course nutrition, chronic disease, and population health, with broader interests in dietary behaviors, food environments, and food insecurity. Her research experience includes investigating the school food environment of children and adolescents in Ghana and assessing the nutritional status of older adults in the Cape Coast Metropolis. As a Research Assistant with the Kakraba Research Group, Jennifer is interested in the intersection of nutrition, aging, and data-driven health research. She is particularly interested in understanding how dietary and social determinants across the life course may influence healthy aging, cognitive and neurodegenerative health. She is also interested in developing her quantitative and data-analytic skills and exploring the application of artificial intelligence and other emerging computational approaches to population health research, while contributing a nutrition perspective to interdisciplinary research.",
-    cv: "/Jennifer/Jennifer-CV.pdf"
   },
   {
     name: "Andrew Jacobs Bilson",
@@ -141,15 +161,6 @@ const people = [
     cv: "/AmeyawClinton/AmeyawClinton-CV.pdf"
   },
   {
-    name: "Desmond Yemeh",
-    credential: "PharmD",
-    role: "Doctoral Research Assistant | Kakraba Research Group",
-    imageSrc: "/Desmond/Desmond.png",
-    bio: "Desmond Yemeh is a PhD student in Aging Studies at Tulane University whose research lies at the intersection of aging, pharmaceutical sciences, bioinformatics, and data science. His work focuses on medication use and safety in older adults and the application of computational approaches to questions in pharmacotherapy, drug discovery, and aging. His research interests include medication adherence and medication related outcomes in older adults, neurodegenerative diseases, and the clinical, behavioral, and psychosocial factors that influence health across the aging process. He is also interested in community based approaches that promote health, independence, and quality of life among older adults. Desmond's computational research interests include bioinformatics, machine learning, quantitative structure activity relationship (QSAR) modeling, predictive modeling, and pharmacovigilance. He is particularly interested in integrating biological, chemical, clinical, and real world data to investigate drug activity and safety, identify patterns associated with health outcomes, and support drug discovery and therapeutic decision making. Before beginning his doctoral training, Desmond practiced as a clinical pharmacist in Ghana, where he led pharmaceutical services, pharmacovigilance, medication safety, antimicrobial stewardship, and quality improvement initiatives. His clinical pharmacy background continues to shape his research interests and his goal of using computational and data driven approaches to improve medication use, therapeutic outcomes, and health across the aging population.",
-    initials: "DY",
-    cv: "/Desmond/Desmond-CV.pdf",
-  },
-  {
     name: "Nyameyie Essuman-Mensah",
     credential: "Esq",
     role: "Legal Research Assistant | Kakraba Research Group",
@@ -157,15 +168,6 @@ const people = [
     initials: "NE",
     bio: "Nyameyie Essuman-Mensah is a Ghanaian and Gambian-qualified lawyer and Master of Laws (LL.M.) student at Pennsylvania State University. She holds an LL.B. from the University of Cape Coast, Ghana, and Barrister-at-Law (BL) qualifications from the Ghana School of Law and the Gambia School of Law. Her legal and academic interests span artificial intelligence governance and ethics, intellectual property, copyright protection for AI-generated works, human rights, and the protection of human dignity in the age of artificial intelligence. At the Kakraba International Research Lab, she contributes to legal research and analysis on emerging issues at the intersection of law, technology, and society, examining legal frameworks, regulatory developments, and ethical considerations surrounding artificial intelligence. Her broader research interests include the relationship between AI and intellectual property rights, the legal protection of AI-generated works, and the development of human centred regulatory frameworks for emerging technologies. She is particularly interested in developing legal approaches that promote technological innovation while safeguarding copyright, human rights, accountability, and human dignity.",
     cv: "/Nyameyie/Nyameyie-CV.pdf",
-  },
-  {
-    name: "Blessing Chukwuma",
-    credential: "MPH",
-    role: "Research Assistant | Kakraba Research Group",
-    imageSrc: "/Blessing/Blessing.jpg",
-    initials: "BC",
-    bio: "Blessing Chukwuma, MPH, is an Assessment Coordinator for Data Analytics and Reporting at the University of Arkansas, Fayetteville, where she applies statistical analysis, data visualization, and population-level assessment methods to support evidence-informed decision-making. Her research interests lie at the intersection of women’s health, health services and outcomes research, health economics, and applied artificial intelligence, with a particular interest in understanding how data-driven approaches can improve healthcare delivery, preventive care, and population health outcomes. Within the Kakraba Research Group, Blessing contributes to interdisciplinary research applying biostatistical, computational, and AI-driven methods to public health and biomedical questions. Her broader research agenda focuses on using real-world and population health data to identify disparities, evaluate healthcare interventions and systems, and develop interpretable decision-support approaches that can inform more efficient and equitable allocation of healthcare resources.",
-    cv: "/Blessing/Blessing-CV.pdf"
   },
   {
     name: "Paa-Kwesi Oduro",
@@ -176,12 +178,13 @@ const people = [
     cv: "/Paa/Oduro-CV.pdf"
   },
   {
-    name: "Matthew Quansah",
-    credential: "MPH",
-    role: "Doctoral Research Assistant | Kakraba Research Group",
-    imageSrc: "/Matthew/Matthew.jpg",
-    bio: "Matthew Quansah is a doctoral student at the Indiana University School of Public Health whose research focuses on environmental microbiology, particularly the use of flies as biomonitors of fecal contamination. His work investigates the acquisition and persistence of fecal-associated microorganisms in flies under different environmental conditions, with an emphasis on understanding how temperature and humidity influence microbial carriage. He is particularly interested in applying fly-based monitoring approaches to better characterize fecal contamination in terrestrial environments and complement conventional environmental monitoring methods.",
-    cv: "/Matthew/Matthew-CV.docx",
+    name: "Jennifer Ataa Tetteh",
+    credential: "BSc.",
+    role: "Research Assistant | Kakraba Research Group",
+    imageSrc: "/Jennifer/Jennifer.jpg",
+    initials: "JA",
+    bio: "Jennifer Ataa Tetteh holds a B.Sc. in Nutrition and Dietetics from the University of Cape Coast, Ghana, where she graduated with First Class Honours. Her research interests center on cognitive health, healthy aging, life-course nutrition, chronic disease, and population health, with broader interests in dietary behaviors, food environments, and food insecurity. Her research experience includes investigating the school food environment of children and adolescents in Ghana and assessing the nutritional status of older adults in the Cape Coast Metropolis. As a Research Assistant with the Kakraba Research Group, Jennifer is interested in the intersection of nutrition, aging, and data-driven health research. She is particularly interested in understanding how dietary and social determinants across the life course may influence healthy aging, cognitive and neurodegenerative health. She is also interested in developing her quantitative and data-analytic skills and exploring the application of artificial intelligence and other emerging computational approaches to population health research, while contributing a nutrition perspective to interdisciplinary research.",
+    cv: "/Jennifer/Jennifer-CV.pdf"
   },
 ];
 
@@ -219,8 +222,8 @@ export default function PeoplePage() {
         <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-red-400/30 dark:bg-zinc-400/30 blur-3xl" />
         <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-orange-400/10 dark:bg-zinc-400/10 blur-3xl" />
 
-        <h1 className="text-2xl sm:text-3xl md:text-4xl">Meet the Team</h1>
-        <p className="mt-4 max-w-4xl text-base sm:text-lg leading-relaxed text-black/60 dark:text-white/60">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-center">Meet the Team</h1>
+        <p className="mt-4 text-center text-base sm:text-lg leading-relaxed text-black/60 dark:text-white/60">
           The Kakraba Research Group brings together faculty, doctoral and
           graduate researchers, and collaborators across biostatistics,
           computational biology, medicine, and law, united by a shared

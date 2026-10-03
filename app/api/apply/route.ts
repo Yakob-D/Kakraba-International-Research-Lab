@@ -9,6 +9,7 @@ export async function POST(request: Request) {
     const first_name = formData.get("firstName");
     const last_name = formData.get("lastName");
     const email = formData.get("email");
+    const how_did_you_hear_about_us = formData.get("how_did_you_hear_about_us");
     const reason = formData.get("reason");
     const cv = formData.get("cv");
 
@@ -22,7 +23,11 @@ export async function POST(request: Request) {
     }
 
     if(typeof email !== "string" || email.trim() === "" || !(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()))){
-        return Response.json({ ok: false, error: "You must input a valid email address!" }, { status: 400 });
+        return Response.json({ ok: false, error: "You must input a valid email address! Example: Turing@example.com" }, { status: 400 });
+    }
+
+    if(typeof how_did_you_hear_about_us !== "string"){
+        return Response.json({ ok: false, error: "How did you hear about us needs to be a text!"});
     }
 
     if(typeof reason !== "string" || reason.trim() === ""){
@@ -54,6 +59,7 @@ export async function POST(request: Request) {
             first_name: firstName,
             last_name: lastName,
             email: trimmedEmail,
+            how_did_you_hear_about_us: how_did_you_hear_about_us,
             reason: trimmedReason,
             cv_path: data.path,
         }

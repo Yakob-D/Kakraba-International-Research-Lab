@@ -33,7 +33,7 @@ function Authors({ authors }: { authors: string }) {
     <>
       {parts.map((part, i) =>
         i % 2 === 1 ? (
-          <span key={i} className="font-semibold text-black dark:text-white">
+          <span key={i} className="text-black/50 dark:text-white/65">
             {part}
           </span>
         ) : (

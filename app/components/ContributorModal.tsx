@@ -163,6 +163,18 @@ export default function ContributorModal() {
                   </div>
 
                   <div>
+                    <label htmlFor="email" className="block text-sm font-medium mt-2">
+                      How did you hear about us? (Please mention the name of the team member if you were recommended by one.)
+                    </label>
+                    <input
+                      id="how_did_you_hear_about_us"
+                      name="how_did_you_hear_about_us"
+                      type="text"
+                      className="mt-1.5 w-full rounded-xl border border-black/10 dark:border-white/10 bg-white/10 dark:bg-white/5 px-3.5 py-2.5 outline-none transition-colors focus:border-black/40 focus:bg-white/80 dark:focus:border-white/40 dark:focus:bg-white/10"
+                    />
+                  </div>
+
+                  <div>
                     <label
                       htmlFor="reason"
                       className="block text-sm font-medium"
