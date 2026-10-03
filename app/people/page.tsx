@@ -152,10 +152,11 @@ const people = [
   },
   {
     name: "Blessing Chukwuma",
+    credential: "MPH",
     role: "Research Assistant | Kakraba Research Group",
     imageSrc: "/Blessing/Blessing.jpg",
     initials: "BC",
-    bio: "Blessing is an Assessment Coordinator at the University of Arkansas, Fayetteville. Her research interests include women’s health, healthcare optimization are artificial intelligence. In the lab, they contribute to research projects, using tools to address healthcare problems. They are particularly interested in broader scale health economics and research.",
+    bio: "Blessing Chukwuma, MPH, is an Assessment Coordinator for Data Analytics and Reporting at the University of Arkansas, Fayetteville, where she applies statistical analysis, data visualization, and population-level assessment methods to support evidence-informed decision-making. Her research interests lie at the intersection of women’s health, health services and outcomes research, health economics, and applied artificial intelligence, with a particular interest in understanding how data-driven approaches can improve healthcare delivery, preventive care, and population health outcomes. Within the Kakraba Research Group, Blessing contributes to interdisciplinary research applying biostatistical, computational, and AI-driven methods to public health and biomedical questions. Her broader research agenda focuses on using real-world and population health data to identify disparities, evaluate healthcare interventions and systems, and develop interpretable decision-support approaches that can inform more efficient and equitable allocation of healthcare resources.",
     cv: "/Blessing/Blessing-CV.pdf"
   },
   {
