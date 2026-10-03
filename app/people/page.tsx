@@ -168,6 +168,8 @@ const people = [
   },
   {
     name: "Matthew Quansah",
+    credential: "MPH",
+    role: "Doctoral Research Assistant | Kakraba Research Group",
     imageSrc: "/Matthew/Matthew.jpg",
     bio: "Matthew Quansah is a doctoral student at the Indiana University School of Public Health whose research focuses on environmental microbiology, particularly the use of flies as biomonitors of fecal contamination. His work investigates the acquisition and persistence of fecal-associated microorganisms in flies under different environmental conditions, with an emphasis on understanding how temperature and humidity influence microbial carriage. He is particularly interested in applying fly-based monitoring approaches to better characterize fecal contamination in terrestrial environments and complement conventional environmental monitoring methods.",
     cv: "/Matthew/Matthew-CV.docx",
