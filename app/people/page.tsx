@@ -31,6 +31,14 @@ const people = [
     cv: "/SamuelDibabu/SamuelDibabu-CV.pdf"
   },
   {
+    name: "Hubert Gagadosu",
+    role: "Doctoral Research Assistant | Kakraba Research Group",
+    imageSrc: "/Hubert/Hubert.jpeg",
+    initials: "",
+    bio: "My research lies at the intersection of biostatistics, epidemiology, and computational health science, with a focus on Bayesian and statistical modeling of complex health, social, genomic, and infectious disease data. I am particularly interested in infectious disease modeling using advanced compartmental frameworks, assessing disease transmission dynamics, evaluating intervention strategies, and understanding factors that influence population health outcomes and health disparities. My work integrates mathematical modeling, statistical inference, and data-driven methods to address public health challenges. More broadly, I am interested in applying quantitative and computational approaches to problems in epidemiology, mathematical biology, and population health, with the goal of supporting evidence-based public health decision-making.",
+    cv: "/Hubert/Hubert-CV.pdf",
+  },
+  {
     name: "Nkemjika Grace Nnama",
     credential: "MSc",
     role: "Doctoral Research Assistant | Kakraba Research Group",
