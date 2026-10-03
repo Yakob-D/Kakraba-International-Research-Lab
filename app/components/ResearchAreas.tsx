@@ -40,10 +40,10 @@ export default function ResearchAreas() {
   return (
     <div className="mt-10 md:mt-20">
       <div className="flex flex-col items-start text-left px-4 sm:px-6 md:px-10">
-        <span className="inline-flex items-center rounded-full border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-orange-700 dark:text-orange-400">
+        <span className="inline-flex items-center rounded-full border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-orange-700 dark:text-zinc-300">
           What We Study
         </span>
-        <h1 className="mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-black via-orange-700 to-red-900 dark:from-orange-900 dark:via-orange-700 dark:to-orange-900 bg-clip-text text-transparent">
+        <h1 className="mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-black via-orange-700 to-red-900 dark:from-zinc-300 dark:via-white dark:to-zinc-500 bg-clip-text text-transparent">
           Research Areas
         </h1>
         <p className="mt-4 max-w-2xl text-base sm:text-lg text-black/50 dark:text-white/50">

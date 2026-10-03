@@ -28,7 +28,7 @@ export default function ResearchCard({
     return (
         <li
             id={slugify(id)}
-            className="group relative flex flex-col sm:flex-row gap-5 sm:gap-8 scroll-mt-28 rounded-xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/[0.03] p-5 sm:p-6 text-center sm:text-left transition-all duration-300 hover:-translate-y-0.5 hover:border-red-400/40 hover:shadow-lg"
+            className="group relative flex flex-col sm:flex-row gap-5 sm:gap-8 scroll-mt-28 rounded-xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/[0.03] p-5 sm:p-6 text-center sm:text-left transition-all duration-300 hover:-translate-y-0.5 hover:border-red-400/40 dark:hover:border-zinc-400/40 hover:shadow-lg"
         >
             {imageSrc ? (
                 <div className="w-32 sm:w-40 shrink-0 self-center sm:self-start mx-auto sm:mx-0">
@@ -39,7 +39,7 @@ export default function ResearchCard({
                     />
                 </div>
             ) : (
-                <div className="flex aspect-[4/5] w-32 sm:w-40 shrink-0 items-center justify-center rounded-xl bg-red-400/10 text-3xl font-semibold text-red-700 dark:text-red-300 mx-auto sm:mx-0">
+                <div className="flex aspect-[4/5] w-32 sm:w-40 shrink-0 items-center justify-center rounded-xl bg-red-400/10 dark:bg-zinc-400/10 text-3xl font-semibold text-red-700 dark:text-zinc-300 mx-auto sm:mx-0">
                     {getInitials(title)}
                 </div>
             )}

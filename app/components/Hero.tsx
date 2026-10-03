@@ -7,13 +7,10 @@ export default function Hero() {
     <div className="relative h-full w-full overflow-hidden mx-auto mt-10 mb-24 sm:mb-32 md:mb-40 md:mt-20 px-4 sm:px-6">
       <div className="mx-auto max-w-7xl flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left lg:flex-1">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-black via-orange-700 to-red-900 dark:from-white/5 dark:via-orange-800 dark:to-red-900 bg-clip-text text-transparent">Kakraba Research Group</h1>
-          <h3 className="text-base sm:text-xl md:text-2xl lg:text-3xl mt-5 sm:mt-6 md:mt-7">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-black via-orange-700 to-red-900 dark:from-zinc-300 dark:via-white dark:to-zinc-500 bg-clip-text text-transparent">Kakraba Research Group</h1>
+          <h3 className="text-base dark:text-white/50 sm:text-xl md:text-2xl lg:text-3xl mt-5 sm:mt-6 md:mt-7">
             Advancing Artificial Intelligence, Biostatistics, and data-driven
-            discovery
-          </h3>
-          <h3 className="text-base sm:text-xl md:text-2xl lg:text-3xl mt-5 sm:mt-6 md:mt-7">
-            to improve Public Health and Biomedical outcomes.
+            discovery to improve Public Health and Biomedical outcomes.
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-10 sm:mt-15 mx-auto lg:mx-0 w-full max-w-xs sm:max-w-none sm:w-auto">
             <Link

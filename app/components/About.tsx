@@ -35,10 +35,10 @@ export default function About() {
   return (
     <div id="about" className="relative mx-auto mt-20 md:mt-32 mb-24 md:mb-10 px-4 sm:px-6 md:px-10 w-full max-w-7xl scroll-mt-28">
       <div className="flex flex-col items-center text-center">
-        <span className="inline-flex items-center rounded-full border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-orange-700 dark:text-orange-400">
+        <span className="inline-flex items-center rounded-full border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-orange-700 dark:text-zinc-300">
           About Us
         </span>
-        <h1 className="mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-black via-orange-700 to-red-900 dark:from-orange-900 dark:via-orange-700 dark:to-orange-900 bg-clip-text text-transparent">
+        <h1 className="mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-black via-orange-700 to-red-900 dark:from-zinc-300 dark:via-white dark:to-zinc-500 bg-clip-text text-transparent">
           Learn More About Us
         </h1>
         <p className="mt-4 max-w-2xl text-base sm:text-lg text-black/50 dark:text-white/50">
@@ -49,10 +49,10 @@ export default function About() {
 
       <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-left">
         <div className="group relative">
-          <div className="absolute -top-8 -left-8 -z-10 h-32 w-32 rounded-full bg-orange-400/20 blur-3xl transition-opacity duration-300 group-hover:opacity-70" />
+          <div className="absolute -top-8 -left-8 -z-10 h-32 w-32 rounded-full bg-orange-400/20 dark:bg-zinc-400/20 blur-3xl transition-opacity duration-300 group-hover:opacity-70" />
           <div className="h-full rounded-3xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/5 p-7 sm:p-8 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-black/10 dark:hover:border-white/10">
             <div className="flex items-center gap-3 mb-4">
-              <span className="h-8 w-1.5 rounded-full bg-gradient-to-b from-red-900 to-orange-700" />
+              <span className="h-8 w-1.5 rounded-full bg-gradient-to-b from-red-900 to-orange-700 dark:from-zinc-200 dark:to-zinc-500" />
               <h2 className="text-xl sm:text-2xl font-semibold">About the Lab</h2>
             </div>
             <p className="text-base sm:text-lg leading-relaxed text-black/50 dark:text-white/50">
@@ -72,7 +72,7 @@ export default function About() {
             </p>
 
             <div className="mt-6 rounded-2xl bg-gradient-to-br from-slate-500/10 via-slate-500/5 to-transparent border border-black/10 p-5">
-              <h3 className="text-xs font-semibold uppercase tracking-widest text-red-900 mb-2">
+              <h3 className="text-xs font-semibold uppercase tracking-widest text-red-900 dark:text-zinc-300 mb-2">
                 Our Mission
               </h3>
               <p className="text-base sm:text-lg italic text-black/70 dark:text-white/70">
@@ -85,11 +85,11 @@ export default function About() {
         </div>
 
         <div className="group relative">
-          <div className="absolute -top-10 -right-10 -z-10 h-32 w-32 rounded-full bg-red-400/30 blur-3xl transition-opacity duration-300 group-hover:opacity-70" />
-          <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-orange-400/10 blur-3xl" />
+          <div className="absolute -top-10 -right-10 -z-10 h-32 w-32 rounded-full bg-red-400/30 dark:bg-zinc-400/30 blur-3xl transition-opacity duration-300 group-hover:opacity-70" />
+          <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-orange-400/10 dark:bg-zinc-400/10 blur-3xl" />
           <div className="h-full rounded-3xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/5 p-7 sm:p-8 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-black/10 dark:hover:border-white/10">
             <div className="flex items-center gap-3 mb-4">
-              <span className="h-8 w-1.5 rounded-full bg-gradient-to-b from-red-900 to-orange-700" />
+              <span className="h-8 w-1.5 rounded-full bg-gradient-to-b from-red-900 to-orange-700 dark:from-zinc-200 dark:to-zinc-500" />
               <h2 className="text-xl sm:text-2xl font-semibold">Global Reach and Mentorship</h2>
             </div>
             <p className="text-base sm:text-lg leading-relaxed text-black/50 dark:text-white/50">
@@ -120,10 +120,10 @@ export default function About() {
       </div>
 
       <div className="relative mt-6 md:mt-8">
-        <div className="absolute -top-10 right-10 -z-10 h-40 w-40 rounded-full bg-red-400/10 blur-3xl" />
+        <div className="absolute -top-10 right-10 -z-10 h-40 w-40 rounded-full bg-red-400/10 dark:bg-zinc-400/10 blur-3xl" />
         <div className="rounded-3xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/5 p-7 sm:p-8 md:p-10 shadow-sm backdrop-blur-xl text-left">
           <div className="flex items-center gap-3 mb-2">
-            <span className="h-8 w-1.5 rounded-full bg-gradient-to-b from-orange-900 to-red-700" />
+            <span className="h-8 w-1.5 rounded-full bg-gradient-to-b from-orange-900 to-red-700 dark:from-zinc-200 dark:to-zinc-500" />
             <h2 className="text-xl sm:text-2xl font-semibold">Research Areas</h2>
           </div>
           <p className="text-base sm:text-lg text-black/50 dark:text-white/50 mb-6">
@@ -136,7 +136,7 @@ export default function About() {
                 key={topic.number}
                 className="rounded-2xl border border-black/10 dark:border-white/10 p-5 transition-colors duration-300 hover:border-black/10 dark:hover:border-white/10 hover:bg-slate-500/5"
               >
-                <span className="text-sm font-bold bg-gradient-to-r from-orange-600 to-red-800 dark:from-orange-400 dark:to-red-500 bg-clip-text text-transparent">
+                <span className="text-sm font-bold bg-gradient-to-r from-orange-600 to-red-800 dark:from-zinc-300 dark:to-zinc-500 bg-clip-text text-transparent">
                   {topic.number}
                 </span>
                 <h3 className="font-bold text-lg text-black dark:text-white mt-1 mb-2">

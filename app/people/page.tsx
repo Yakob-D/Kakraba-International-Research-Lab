@@ -136,6 +136,7 @@ const people = [
     name: "Desmond Yemeh",
     credential: "PharmD",
     role: "Doctoral Research Assistant | Kakraba Research Group",
+    imageSrc: "/Desmond/Desmond.png",
     bio: "Desmond Yemeh is a PhD student in Aging Studies at Tulane University whose research lies at the intersection of aging, pharmaceutical sciences, bioinformatics, and data science. His work focuses on medication use and safety in older adults and the application of computational approaches to questions in pharmacotherapy, drug discovery, and aging. His research interests include medication adherence and medication related outcomes in older adults, neurodegenerative diseases, and the clinical, behavioral, and psychosocial factors that influence health across the aging process. He is also interested in community based approaches that promote health, independence, and quality of life among older adults. Desmond's computational research interests include bioinformatics, machine learning, quantitative structure activity relationship (QSAR) modeling, predictive modeling, and pharmacovigilance. He is particularly interested in integrating biological, chemical, clinical, and real world data to investigate drug activity and safety, identify patterns associated with health outcomes, and support drug discovery and therapeutic decision making. Before beginning his doctoral training, Desmond practiced as a clinical pharmacist in Ghana, where he led pharmaceutical services, pharmacovigilance, medication safety, antimicrobial stewardship, and quality improvement initiatives. His clinical pharmacy background continues to shape his research interests and his goal of using computational and data driven approaches to improve medication use, therapeutic outcomes, and health across the aging population.",
     initials: "DY",
     cv: "/Desmond/Desmond-CV.pdf",
@@ -152,7 +153,7 @@ const people = [
   {
     name: "Blessing Chukwuma",
     role: "Research Assistant | Kakraba Research Group",
-    imageSrc: "/Blessing/Blessing.png",
+    imageSrc: "/Blessing/Blessing.jpg",
     initials: "BC",
     bio: "Blessing is an Assessment Coordinator at the University of Arkansas, Fayetteville. Her research interests include women’s health, healthcare optimization are artificial intelligence. In the lab, they contribute to research projects, using tools to address healthcare problems. They are particularly interested in broader scale health economics and research.",
     cv: "/Blessing/Blessing-CV.pdf"
@@ -198,8 +199,8 @@ export default function PeoplePage() {
   return (
     <div className="px-4 sm:px-8 md:px-16 py-6 sm:py-10">
       <div className="relative mx-auto rounded-2xl border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/5 p-5 sm:p-8 md:p-10 shadow-md backdrop-blur-xl">
-        <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-red-400/30 blur-3xl" />
-        <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-orange-400/10 blur-3xl" />
+        <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-red-400/30 dark:bg-zinc-400/30 blur-3xl" />
+        <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-orange-400/10 dark:bg-zinc-400/10 blur-3xl" />
 
         <h1 className="text-2xl sm:text-3xl md:text-4xl">Meet the Team</h1>
         <p className="mt-4 max-w-4xl text-base sm:text-lg leading-relaxed text-black/60 dark:text-white/60">
@@ -230,7 +231,7 @@ export default function PeoplePage() {
         {groups.map((group) => (
           <section key={group.slug} id={group.slug} className="mt-12 scroll-mt-28">
             <h2 className="flex items-center gap-3 text-xl sm:text-2xl font-semibold">
-              <span className="h-6 w-1 rounded-full bg-gradient-to-b from-red-400 to-orange-400" />
+              <span className="h-6 w-1 rounded-full bg-gradient-to-b from-red-400 to-orange-400 dark:from-zinc-300 dark:to-zinc-500" />
               {group.category}
             </h2>
             <ul className="mt-5 space-y-4">

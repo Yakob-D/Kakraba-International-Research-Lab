@@ -34,7 +34,7 @@ export default function Navbar() {
                                     href={link.href}
                                     className={`rounded-lg px-3 py-1.5 text-xs sm:text-sm lg:text-lg font-bold transition-colors duration-300 ${
                                         isActive(link.href)
-                                            ? "bg-black/10 dark:bg-white/10"
+                                            ? "underline underline-offset-8 decoration-2 decoration-orange-700 dark:decoration-zinc-300"
                                             : "hover:text-black/60 dark:hover:text-white/60"
                                     }`}
                                 >

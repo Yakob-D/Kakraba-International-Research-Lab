@@ -287,9 +287,9 @@ function ArrowIcon() {
 
 function PublicationCard({ pub }: { pub: Publication }) {
   return (
-    <li className="group relative flex flex-col sm:flex-row gap-3 sm:gap-6 rounded-xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/[0.03] p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-red-400/40 hover:shadow-lg">
+    <li className="group relative flex flex-col sm:flex-row gap-3 sm:gap-6 rounded-xl border border-black/10 dark:border-white/10 bg-white/40 dark:bg-white/[0.03] p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-red-400/40 dark:hover:border-zinc-400/40 hover:shadow-lg">
       <div className="shrink-0 sm:w-12">
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-red-400/10 font-mono text-sm font-semibold text-red-700 dark:text-red-300">
+        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-red-400/10 dark:bg-zinc-400/10 font-mono text-sm font-semibold text-red-700 dark:text-zinc-300">
           {pub.no}
         </span>
       </div>
@@ -301,7 +301,7 @@ function PublicationCard({ pub }: { pub: Publication }) {
               href={pub.doi}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-red-600 dark:hover:text-red-300"
+              className="transition-colors hover:text-red-600 dark:hover:text-zinc-300"
             >
               {pub.title}
             </a>
@@ -328,14 +328,14 @@ function PublicationCard({ pub }: { pub: Publication }) {
               href={pub.doi}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex max-w-full items-center gap-2 rounded-full border border-black/10 dark:border-white/15 px-3 py-1 text-xs sm:text-sm font-mono text-black/70 dark:text-white/70 transition-colors group-hover:border-red-400/50 hover:bg-red-400/10"
+              className="inline-flex max-w-full items-center gap-2 rounded-full border border-black/10 dark:border-white/15 px-3 py-1 text-xs sm:text-sm font-mono text-black/70 dark:text-white/70 transition-colors group-hover:border-red-400/50 dark:group-hover:border-zinc-400/50 hover:bg-red-400/10 dark:hover:bg-zinc-400/10"
             >
               <span className="truncate">{pub.doi.replace("https://", "")}</span>
               <ArrowIcon />
             </a>
           )}
           {pub.status && (
-            <span className="inline-flex items-center rounded-full bg-orange-400/15 px-3 py-1 text-xs sm:text-sm text-orange-700 dark:text-orange-300">
+            <span className="inline-flex items-center rounded-full bg-orange-400/15 dark:bg-zinc-400/15 px-3 py-1 text-xs sm:text-sm text-orange-700 dark:text-zinc-300">
               {pub.status}
             </span>
           )}
@@ -351,8 +351,8 @@ export default function PublicationsPage() {
   return (
     <div className="px-4 sm:px-8 md:px-16 py-6 sm:py-10">
       <div className="relative mx-auto rounded-2xl border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/5 p-5 sm:p-8 md:p-10 shadow-md backdrop-blur-xl">
-        <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-red-400/30 blur-3xl" />
-        <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-orange-400/10 blur-3xl" />
+        <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-red-400/30 dark:bg-zinc-400/30 blur-3xl" />
+        <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-orange-400/10 dark:bg-zinc-400/10 blur-3xl" />
 
         <h1 className="text-2xl sm:text-3xl md:text-4xl">Peer-Reviewed Publications</h1>
         <p className="mt-4 max-w-4xl text-base sm:text-lg leading-relaxed text-black/60 dark:text-white/60">
@@ -388,7 +388,7 @@ export default function PublicationsPage() {
         {years.map((y) => (
           <section key={y.year} id={`year-${y.year}`} className="mt-12 scroll-mt-28">
             <h2 className="flex items-center gap-3 text-xl sm:text-2xl font-semibold">
-              <span className="h-6 w-1 rounded-full bg-gradient-to-b from-red-400 to-orange-400" />
+              <span className="h-6 w-1 rounded-full bg-gradient-to-b from-red-400 to-orange-400 dark:from-zinc-300 dark:to-zinc-500" />
               {y.year}
             </h2>
             <ul className="mt-5 space-y-4">

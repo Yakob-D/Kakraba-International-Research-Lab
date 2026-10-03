@@ -14,8 +14,8 @@ function categoryOf(type: string): Exclude<Category, "All"> {
 }
 
 const badgeStyles: Record<Exclude<Category, "All">, string> = {
-  Talks: "bg-red-400/10 text-red-700 dark:text-red-300",
-  Posters: "bg-orange-400/15 text-orange-700 dark:text-orange-300",
+  Talks: "bg-red-400/10 dark:bg-zinc-400/10 text-red-700 dark:text-zinc-300",
+  Posters: "bg-orange-400/15 dark:bg-zinc-400/15 text-orange-700 dark:text-zinc-300",
   Panels: "bg-amber-400/15 text-amber-700 dark:text-amber-300",
   Workshops: "bg-rose-400/15 text-rose-700 dark:text-rose-300",
 };
@@ -51,15 +51,15 @@ function PresentationCard({ item }: { item: Presentation }) {
     <li
       className={`relative rounded-xl border bg-white/40 dark:bg-white/[0.03] p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg ${
         isKeynote
-          ? "border-red-400/50 shadow-md"
-          : "border-black/10 dark:border-white/10 hover:border-red-400/40"
+          ? "border-red-400/50 dark:border-zinc-400/50 shadow-md"
+          : "border-black/10 dark:border-white/10 hover:border-red-400/40 dark:hover:border-zinc-400/40"
       }`}
     >
       <div className="flex flex-wrap items-center gap-2">
         <span
           className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${
             isKeynote
-              ? "bg-gradient-to-r from-red-500 to-orange-400 text-white"
+              ? "bg-gradient-to-r from-red-500 to-orange-400 text-white dark:from-zinc-300 dark:to-zinc-500 dark:text-black"
               : badgeStyles[category]
           }`}
         >
@@ -82,7 +82,7 @@ function PresentationCard({ item }: { item: Presentation }) {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="mt-1 h-4 w-4 shrink-0 text-red-400"
+          className="mt-1 h-4 w-4 shrink-0 text-red-400 dark:text-zinc-400"
           aria-hidden="true"
         >
           <path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z" />
@@ -180,7 +180,7 @@ export default function ConferenceList({ data }: { data: YearGroup[] }) {
           >
             <div className="md:sticky md:top-28 h-fit">
               <h2 className="flex items-center gap-3 text-xl sm:text-2xl font-semibold">
-                <span className="h-6 w-1 rounded-full bg-gradient-to-b from-red-400 to-orange-400" />
+                <span className="h-6 w-1 rounded-full bg-gradient-to-b from-red-400 to-orange-400 dark:from-zinc-300 dark:to-zinc-500" />
                 {y.year}
               </h2>
               <p className="mt-1 pl-4 text-xs text-black/50 dark:text-white/50">
