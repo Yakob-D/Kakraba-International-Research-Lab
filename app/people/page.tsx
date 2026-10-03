@@ -48,13 +48,13 @@ const people = [
     cv: "/NkemjikaGrace/Nkem-CV.pdf"
   },
   {
-    name: "Blessing Chukwuma",
-    credential: "MPH",
+    name: "Andrew Jacobs Bilson",
+    credential: "PharmD",
     role: "Doctoral Research Assistant | Kakraba Research Group",
-    imageSrc: "/Blessing/Blessing.jpg",
-    initials: "BC",
-    bio: "Blessing Chukwuma, MPH, is an Assessment Coordinator for Data Analytics and Reporting at the University of Arkansas, Fayetteville, where she applies statistical analysis, data visualization, and population-level assessment methods to support evidence-informed decision-making. Her research interests lie at the intersection of women’s health, health services and outcomes research, health economics, and applied artificial intelligence, with a particular interest in understanding how data-driven approaches can improve healthcare delivery, preventive care, and population health outcomes. Within the Kakraba Research Group, Blessing contributes to interdisciplinary research applying biostatistical, computational, and AI-driven methods to public health and biomedical questions. Her broader research agenda focuses on using real-world and population health data to identify disparities, evaluate healthcare interventions and systems, and develop interpretable decision-support approaches that can inform more efficient and equitable allocation of healthcare resources.",
-    cv: "/Blessing/Blessing-CV.pdf"
+    imageSrc: "/Andrew/Andrew.jpg",
+    initials: "AJ",
+    bio: "Andrew is a doctoral student in the Interdisciplinary Program in Aging Studies at Tulane University. His research interests include Parkinson’s disease and movement disorders, genetics/genomics, and aging/neurodegeneration. In the lab, he contributes to collaborative research using clinical and genetic data, with interests spanning disease phenotyping, bioinformatics, and population health. He is particularly interested in research at the intersection of aging, neurodegeneration, and genetic factors, especially in underrepresented populations.",
+    cv: "/Andrew/Andrew-CV.pdf"
   },
   {
     name: "Matthew Quansah",
@@ -127,15 +127,6 @@ const people = [
     cv: "/Kwame/Kwame-CV.pdf"
   },
   {
-    name: "Andrew Jacobs Bilson",
-    credential: "PharmD",
-    role: "Doctoral Research Assistant | Kakraba Research Group",
-    imageSrc: "/Andrew/Andrew.jpg",
-    initials: "AJ",
-    bio: "Andrew is a doctoral student in the Interdisciplinary Program in Aging Studies at Tulane University. His research interests include Parkinson’s disease and movement disorders, genetics/genomics, and aging/neurodegeneration. In the lab, he contributes to collaborative research using clinical and genetic data, with interests spanning disease phenotyping, bioinformatics, and population health. He is particularly interested in research at the intersection of aging, neurodegeneration, and genetic factors, especially in underrepresented populations.",
-    cv: "/Andrew/Andrew-CV.pdf"
-  },
-  {
     name: "Maame Aba Arhinmah Mensah",
     credential: "PharmD",
     role: "Masters Research Assistant | Kakraba Research Group",
@@ -185,6 +176,15 @@ const people = [
     initials: "JA",
     bio: "Jennifer Ataa Tetteh holds a B.Sc. in Nutrition and Dietetics from the University of Cape Coast, Ghana, where she graduated with First Class Honours. Her research interests center on cognitive health, healthy aging, life-course nutrition, chronic disease, and population health, with broader interests in dietary behaviors, food environments, and food insecurity. Her research experience includes investigating the school food environment of children and adolescents in Ghana and assessing the nutritional status of older adults in the Cape Coast Metropolis. As a Research Assistant with the Kakraba Research Group, Jennifer is interested in the intersection of nutrition, aging, and data-driven health research. She is particularly interested in understanding how dietary and social determinants across the life course may influence healthy aging, cognitive and neurodegenerative health. She is also interested in developing her quantitative and data-analytic skills and exploring the application of artificial intelligence and other emerging computational approaches to population health research, while contributing a nutrition perspective to interdisciplinary research.",
     cv: "/Jennifer/Jennifer-CV.pdf"
+  },
+  {
+    name: "Blessing Chukwuma",
+    credential: "MPH",
+    role: "Doctoral Research Assistant | Kakraba Research Group",
+    imageSrc: "/Blessing/Blessing.jpg",
+    initials: "BC",
+    bio: "Blessing Chukwuma, MPH, is an Assessment Coordinator for Data Analytics and Reporting at the University of Arkansas, Fayetteville, where she applies statistical analysis, data visualization, and population-level assessment methods to support evidence-informed decision-making. Her research interests lie at the intersection of women’s health, health services and outcomes research, health economics, and applied artificial intelligence, with a particular interest in understanding how data-driven approaches can improve healthcare delivery, preventive care, and population health outcomes. Within the Kakraba Research Group, Blessing contributes to interdisciplinary research applying biostatistical, computational, and AI-driven methods to public health and biomedical questions. Her broader research agenda focuses on using real-world and population health data to identify disparities, evaluate healthcare interventions and systems, and develop interpretable decision-support approaches that can inform more efficient and equitable allocation of healthcare resources.",
+    cv: "/Blessing/Blessing-CV.pdf"
   },
 ];
 
