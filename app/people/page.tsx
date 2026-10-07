@@ -85,7 +85,7 @@ const people = [
     name: "Samuel Dibabu Assefa",
     credential: "RT",
     role: "Graduate Research Assistant | Kakraba Research Group",
-    imageSrc: "/SamuelDibabu/SamuelDibabu.JPG",
+    imageSrc: "/SamuelDibabu/SamuelDibabu.jpeg",
     initials: "SD",
     bio: "Samuel is a Masters student in Biostatistics at Tulane University, specializing in Data Science and Statistical Machine Learning. He holds a bachelor's degree in Medical Imaging. His research focuses on statistical machine learning methods and explainable AI workflows to enhance clinical risk prediction and personalized medicine. As a Graduate Research Assistant at Kakraba Research Group, Samuel engineer and benchmark comprehensive machine learning pipelines in Python and R implementing linear and semi-parametric modeling (Logistic Regression, GAM), discriminant analysis (LDA, QDA), probabilistic methods (Naive Bayes), instance and kernel algorithms (KNN, SVC), tree-based ensembles (Random Forest, Extra Trees), advanced boosting frameworks (AdaBoost, XGBoost, LightGBM, CatBoost), and unsupervised architectures (PCA, clustering) to optimize risk prediction across clinical and public health contexts. He is particularly interested at the intersection of statistics, equitable AI, and diagnostic clinical imaging. He is dedicated to creating interpretable, data-driven tools that translate complex algorithms into practical, everyday clinical decisions",
     cv: "/SamuelDibabu/SamuelDibabu-CV.pdf"
