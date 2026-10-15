@@ -15,7 +15,7 @@ const people = [
   },
   {
     name: "Enoch K. Larrey",
-    credentials: "Ph.D., M.S., B.Sc",
+    credential: "Ph.D., M.S., B.Sc",
     role: "Doctoral Researcher Assistant | Kakraba Research Group",
     imageSrc: "/Larrey/Larrey.jpg",
     imageAlt: "Enoch K. Larrey",
