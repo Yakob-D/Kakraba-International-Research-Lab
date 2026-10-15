@@ -14,6 +14,16 @@ const people = [
     cv: "/SamuelKakraba/DR-KAKRABA-CV.pdf"
   },
   {
+    name: "Enoch K. Larrey",
+    credentials: "Ph.D., M.S., B.Sc",
+    role: "Doctoral Researcher Assistant | Kakraba Research Group",
+    imageSrc: "/Larrey/Larrey.jpg",
+    imageAlt: "Enoch K. Larrey",
+    initials: "EKL",
+    bio: "Enoch K. Larrey holds a Ph.D. in Bioinformatics from the joint program at the University of Arkansas at Little Rock and the University of Arkansas for Medical Sciences. His research interests include biomarker discovery, computational drug discovery, radiation biology, cancer biology, and comparative genomics. His research focuses on addressing critical biological questions through the development and application of bioinformatics workflows to process and analyze transcriptomics and proteomics datasets. He is particularly interested in understanding how genetic and chemical perturbations, as well as disease conditions, influence gene and protein expression patterns. He is also interested in developing interactive data visualization tools and implementing machine learning models to facilitate biological discovery and disease prediction. In Dr. Kakraba's lab, he applies his interdisciplinary expertise in molecular biology and bioinformatics to advance research across multiple biological contexts, including cancer and Alzheimer's disease.",
+    cv: "",
+  },
+  {
     name: "Edmund Fosu Agyemang",
     credential: "GStat, MPhil, MS",
     role: "Doctoral Research Assistant | Kakraba Research Group",
