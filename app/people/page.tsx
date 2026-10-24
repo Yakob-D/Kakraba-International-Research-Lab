@@ -49,6 +49,15 @@ const people = [
     cv: "/Desmond/Desmond-CV.pdf",
   },
   {
+    name: "Frank Adolwine Ayugane",
+    credential: "MBChB, BSc",
+    role: "Medical Officer & Research Affiliate | Kakraba Research Group",
+    imageSrc: "/Frank/Frank.jpg",
+    bio: "Frank is a medical doctor and researcher based in Accra, Ghana. His research interests include artificial intelligence in public health, maternal and reproductive health outcomes, and research literacy among healthcare professionals in sub-Saharan Africa. In the lab, he contributes to work at the intersection of AI and health systems, drawing on qualitative methods, quantitative data analysis, and frontline clinical experience across obstetrics and gynaecology, surgery, and emergency care to address access and quality gaps in health service delivery. He is particularly interested in how AI-supported diagnostic tools can expand access to imaging and clinical decision support in under-resourced settings across Ghana and West Africa",
+    initials: "FAA",
+    cv: "/Frank/Frank-CV.docx"
+  },
+  {
     name: "Nkemjika Grace Nnama",
     credential: "MSc",
     role: "Doctoral Research Assistant | Kakraba Research Group",
@@ -204,6 +213,7 @@ function categoryOf(person: (typeof people)[number]): string {
   if (/Doctoral Research Assistant/i.test(role)) return "Doctoral Research Assistants";
   if (/Legal Research Assistant/i.test(role)) return "Legal Research Assistant";
   if (/Software Research Assistant/i.test(role)) return "Software Research Assistant";
+  if (/Medical Officer & Research Affiliate/i.test(role)) return "Medical Officer & Research Affiliate";
   return "Graduate Research Assistants";
 }
 
@@ -213,6 +223,7 @@ const categoryOrder = [
   "Graduate Research Assistants",
   "Software Research Assistant",
   "Legal Research Assistant",
+  "Medical Officer & Research Affiliate",
 ];
 
 const groups = categoryOrder
