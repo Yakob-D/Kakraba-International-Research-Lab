@@ -1,7 +1,9 @@
 import ProfileCard from "../ui/ProfileCard";
 import Footer from "../components/Footer";
 import { slugify } from "../lib/slugify";
-import { people, categoryOf } from "./data"
+import { getMembers } from "../lib/members";
+
+export const revalildate = 60;
 
 const categoryOrder = [
   "Head of the Lab",
@@ -12,15 +14,17 @@ const categoryOrder = [
   "Medical Officer & Research Affiliate",
 ];
 
-const groups = categoryOrder
-  .map((category) => ({
-    category,
-    slug: slugify(category),
-    members: people.filter((person) => categoryOf(person) === category),
-  }))
-  .filter((group) => group.members.length > 0);
+export default async function PeoplePage() {
+  const people = await getMembers();
 
-export default function PeoplePage() {
+  const groups = categoryOrder
+    .map((category) => ({
+      category,
+      slug: slugify(category),
+      members: people.filter((p) => p.category === category),
+    }))
+    .filter((group) => group.members.length > 0);
+
   const total = people.length;
 
   return (
@@ -29,7 +33,9 @@ export default function PeoplePage() {
         <div className="absolute -top-10 -right-10 -z-10 h-40 w-40 rounded-full bg-red-400/30 dark:bg-zinc-400/30 blur-3xl" />
         <div className="absolute -bottom-10 -left-10 -z-10 h-40 w-40 rounded-full bg-orange-400/10 dark:bg-zinc-400/10 blur-3xl" />
 
-        <h1 className="text-2xl sm:text-3xl md:text-4xl text-center">Meet the Team</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-center">
+          Meet the Team
+        </h1>
         <p className="mt-4 text-center text-base sm:text-lg leading-relaxed text-black/60 dark:text-white/60">
           The Kakraba Research Group brings together faculty, doctoral and
           graduate researchers, and collaborators across biostatistics,
@@ -37,7 +43,10 @@ export default function PeoplePage() {
           commitment to rigorous, reproducible, data-driven science.
         </p>
 
-        <nav className="mt-6 flex flex-wrap items-center gap-2" aria-label="Jump to group">
+        <nav
+          className="mt-6 flex flex-wrap items-center gap-2"
+          aria-label="Jump to group"
+        >
           {groups.map((group) => (
             <a
               key={group.slug}
@@ -56,14 +65,27 @@ export default function PeoplePage() {
         </nav>
 
         {groups.map((group) => (
-          <section key={group.slug} id={group.slug} className="mt-12 scroll-mt-28">
+          <section
+            key={group.slug}
+            id={group.slug}
+            className="mt-12 scroll-mt-28"
+          >
             <h2 className="flex items-center gap-3 text-xl sm:text-2xl font-semibold">
               <span className="h-6 w-1 rounded-full bg-gradient-to-b from-red-400 to-orange-400 dark:from-zinc-300 dark:to-zinc-500" />
               {group.category}
             </h2>
             <ul className="mt-5 space-y-4">
               {group.members.map((person) => (
-                <ProfileCard key={person.name} {...person} />
+                <ProfileCard
+                  key={person.id}
+                  name={person.name}
+                  credential={person.credential ?? undefined}
+                  role={person.role ?? undefined}
+                  bio={person.bio}
+                  imageSrc={person.image_url ?? undefined}
+                  initials={person.initials ?? undefined}
+                  cv={person.cv_url ?? undefined}
+                />
               ))}
             </ul>
           </section>
