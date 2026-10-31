@@ -19,6 +19,8 @@ export default function Navbar() {
     const pathname = usePathname()
     const isActive = (href: string) => href === pathname
 
+    if (pathname.startsWith("/portal")) return null;
+
     return (
         <div className="mt-5 sticky top-5 z-50 isolate [transform:translateZ(0)] px-4 sm:px-6">
             <div className="mx-auto max-w-5xl">
