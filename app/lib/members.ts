@@ -17,7 +17,8 @@ export async function getMembers(): Promise<Member[]> {
     const { data, error } = await supabaseAdmin
     .from("members")
     .select("id, name, credential, role, category, bio, image_url, cv_url, initials")
-    .order("sort_order")
+    .eq("status", "published")
+    .order("sort_order");
 
     if (error) throw new Error(`Failed to load members: ${error.message}`);
     return data;

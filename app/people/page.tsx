@@ -2,22 +2,14 @@ import ProfileCard from "../ui/ProfileCard";
 import Footer from "../components/Footer";
 import { slugify } from "../lib/slugify";
 import { getMembers } from "../lib/members";
+import { CATEGORIES } from "../lib/categories";
 
 export const revalildate = 60;
-
-const categoryOrder = [
-  "Head of the Lab",
-  "Doctoral Research Assistants",
-  "Graduate Research Assistants",
-  "Software Research Assistant",
-  "Legal Research Assistant",
-  "Medical Officer & Research Affiliate",
-];
 
 export default async function PeoplePage() {
   const people = await getMembers();
 
-  const groups = categoryOrder
+  const groups = CATEGORIES
     .map((category) => ({
       category,
       slug: slugify(category),
