@@ -17,10 +17,18 @@ const transporter =
       })
     : null;
 
-// The site's address, e.g. http://localhost:3000 or the Vercel URL
+// The site's address for links in emails
 export async function siteUrl() {
+  // On the live site, always use the real production address.
+  // Vercel sets these two variables automatically.
+  const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (process.env.VERCEL_ENV === "production" && productionHost) {
+    return `https://${productionHost}`;
+  }
+
+  // Anywhere else (your Mac, preview deploys): use the address you're browsing
   const origin = (await headers()).get("origin");
-  return origin ?? "https://kakraba-research-group.vercel.app";
+  return origin ?? "http://localhost:3000";
 }
 
 // Names come from users, so never put them into HTML unescaped
