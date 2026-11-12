@@ -4,18 +4,34 @@ import { revalidatePath } from "next/cache";
 import { createClient } from "../../lib/supabase/server";
 import { CATEGORIES } from "@/app/lib/categories";
 import { redirect } from "next/navigation";
+import { supabaseAdmin } from "@/app/lib/supabase-admin";
+import { emailAdmin } from "@/app/lib/mailer";
 
 export async function claimProfile(formData: FormData) {
     const memberId = formData.get("memberId");
     if(typeof memberId != "string") return;
 
     const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return;
 
     const { error } = await supabase
         .from("profile_claims")
         .insert({ member_id: memberId });
 
     if (error) throw new Error(error.message);
+
+    // Tell the admin (the user client can't read other members, so use the admin client)
+    const { data: member } = await supabaseAdmin
+        .from("members")
+        .select("name")
+        .eq("id", memberId)
+        .maybeSingle();
+    await emailAdmin(
+        "[Kakraba Portal] New profile claim",
+        "New profile claim",
+        `${user.email} says they are ${member?.name ?? "a lab member"}.`,
+    );
 
     revalidatePath("/portal/profile");
 }
@@ -117,6 +133,12 @@ export async function createProfile(
         }
         return { ok: false, message: error.message};
     }
+
+    await emailAdmin(
+        "[Kakraba Portal] New member waiting",
+        "A new member signed up",
+        `${name} (${user.email}) created a profile in ${category}. It stays hidden until you publish it.`,
+    );
 
     redirect("/portal/profile");
 }
