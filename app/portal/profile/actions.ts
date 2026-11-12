@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { createClient } from "../../lib/supabase/server";
 import { CATEGORIES } from "@/app/lib/categories";
+import { redirect } from "next/navigation";
 
 export async function claimProfile(formData: FormData) {
     const memberId = formData.get("memberId");
@@ -81,4 +82,41 @@ export async function updateFileUrl(
     revalidatePath("/portal/profile");
     revalidatePath("/people");
     return { ok: true, message: kind === "image" ? "Photo updated." : "CV updated." };
+}
+
+export async function createProfile(
+    _prevState: FormState,
+    formData: FormData
+): Promise<FormState> {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    if(!user) return { ok: false, message: "You're not logging in." };
+
+    const name = String(formData.get("name") ?? "").trim();
+    const category = String(formData.get("category") ?? "");
+
+    if(!name) return {ok: false, message: "Enter your full name." };
+    if (!CATEGORIES.includes(category) || category === "Head of the Lab") {
+        return { ok: false, message: "Choose your section."};
+    }
+
+    const initials = name
+    .split(/\s+/)
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 3)
+    .toUpperCase();
+
+    const { error } = await supabase
+        .from("members")
+        .insert({ user_id: user.id, name, category, initials });
+    
+    if(error){
+        if(error.code === "23505") {
+            return { ok: false, message: "You already have a profile."};
+        }
+        return { ok: false, message: error.message};
+    }
+
+    redirect("/portal/profile");
 }

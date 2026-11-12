@@ -22,6 +22,7 @@ export default async function ProfilePage() {
 
   if (member) {
     const firstName = member.name.split(" ")[0];
+    const lastName = member.name.split(" ")[1];
     const isLive = member.status === "published";
 
     return (
@@ -35,7 +36,7 @@ export default async function ProfilePage() {
           <header className="mb-10 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-                Hi, {firstName}
+                Hi, {firstName} {lastName}
               </h1>
               <p className="mt-2 max-w-xl text-black/60 dark:text-white/60">
                 Keep your lab profile current. Saved changes go straight to the
