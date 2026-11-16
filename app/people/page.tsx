@@ -2,14 +2,15 @@ import ProfileCard from "../ui/ProfileCard";
 import Footer from "../components/Footer";
 import { slugify } from "../lib/slugify";
 import { getMembers } from "../lib/members";
-import { CATEGORIES } from "../lib/categories";
+import { orderSections } from "../lib/categories";
 
-export const revalildate = 60;
+export const revalidate = 60;
 
 export default async function PeoplePage() {
   const people = await getMembers();
 
-  const groups = CATEGORIES
+  // Built-in sections first, then any new sections members added
+  const groups = orderSections(people.map((p) => p.category))
     .map((category) => ({
       category,
       slug: slugify(category),

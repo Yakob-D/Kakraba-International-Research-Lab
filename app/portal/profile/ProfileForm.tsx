@@ -2,7 +2,7 @@
 
 import { useActionState, useState } from "react";
 import { UpdateProfile, type FormState } from "./actions";
-import { CATEGORIES } from "@/app/lib/categories";
+import { isHeadOfLab } from "@/app/lib/categories";
 import ProfileCard from "@/app/ui/ProfileCard";
 import FileUpload from "./FileUpload";
 
@@ -28,9 +28,11 @@ const hint = "text-xs leading-relaxed text-black/50 dark:text-white/45";
 export default function ProfileForm({
   member,
   userId,
+  sections,
 }: {
   member: Member;
   userId: string;
+  sections: string[];
 }) {
   // Controlled fields, so the preview can update as you type
   const [name, setName] = useState(member.name);
@@ -59,10 +61,14 @@ export default function ProfileForm({
 
   const [state, formAction, pending] = useActionState(saveAction, null);
 
-  // Only someone already in "Head of the Lab" sees that option
-  const categories = CATEGORIES.filter(
-    (c) => c !== "Head of the Lab" || member.category === c,
+  // Only someone already in "Head of the Lab" sees that option.
+  // Always include their current section (it may be a new, unpublished one).
+  const categories = sections.filter(
+    (c) => !isHeadOfLab(c) || member.category === c,
   );
+  if (!categories.includes(member.category)) {
+    categories.push(member.category);
+  }
 
   // Has anything changed since the last save?
   const dirty =

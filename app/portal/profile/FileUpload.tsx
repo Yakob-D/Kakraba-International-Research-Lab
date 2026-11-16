@@ -29,7 +29,7 @@ export default function FileUpload({
 }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
-  const [message, setMessage] = useState<{ ok: Boolean; text: string } | null>(
+  const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(
     null,
   );
 

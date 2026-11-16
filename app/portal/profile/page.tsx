@@ -3,6 +3,7 @@ import { createClient } from "../../lib/supabase/server";
 import { supabaseAdmin } from "../../lib/supabase-admin";
 import { claimProfile } from "./actions";
 import ProfileForm from "./ProfileForm";
+import { getSections } from "@/app/lib/members";
 
 export default async function ProfilePage() {
   const supabase = await createClient();
@@ -70,7 +71,11 @@ export default async function ProfilePage() {
             </p>
           )}
 
-          <ProfileForm member={member} userId={user.id}/>
+          <ProfileForm
+            member={member}
+            userId={user.id}
+            sections={await getSections()}
+          />
         </div>
       </div>
     );

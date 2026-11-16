@@ -1,5 +1,6 @@
 import "server-only"
 import { supabaseAdmin } from "./supabase-admin"
+import { orderSections } from "./categories"
 
 export type Member = {
     id: string;
@@ -22,4 +23,15 @@ export async function getMembers(): Promise<Member[]> {
 
     if (error) throw new Error(`Failed to load members: ${error.message}`);
     return data;
+}
+
+// Every section that can be chosen: the built-in ones plus any new
+// sections used by published members (in display order)
+export async function getSections(): Promise<string[]> {
+    const { data } = await supabaseAdmin
+    .from("members")
+    .select("category")
+    .eq("status", "published");
+
+    return orderSections((data ?? []).map((row) => row.category));
 }

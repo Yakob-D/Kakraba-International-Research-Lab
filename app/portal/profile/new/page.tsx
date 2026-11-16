@@ -1,6 +1,8 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/app/lib/supabase/server";
 import NewProfileForm from "./NewProfileForm";
+import { getSections } from "@/app/lib/members";
+import { isHeadOfLab } from "@/app/lib/categories";
 
 export default async function NewProfilePage() {
   const supabase = await createClient();
@@ -17,6 +19,8 @@ export default async function NewProfilePage() {
     .eq("user_id", user.id).eq("status", "pending").maybeSingle();
   if (claim) redirect("/portal/profile");
 
+  const sections = (await getSections()).filter((s) => !isHeadOfLab(s));
+
   return (
     <div className="relative min-h-screen flex items-center px-4 text-black dark:text-white">
       <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_24px]">
@@ -29,7 +33,7 @@ export default async function NewProfilePage() {
           Start with your name and section. Next you&apos;ll add your bio, photo
           and CV. Your profile goes public once an admin approves it.
         </p>
-        <NewProfileForm />
+        <NewProfileForm sections={sections} />
       </main>
     </div>
   );

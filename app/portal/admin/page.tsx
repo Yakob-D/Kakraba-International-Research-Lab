@@ -1,6 +1,7 @@
 import { requireAdmin, emailOf } from "@/app/lib/admin";
 import { supabaseAdmin } from "@/app/lib/supabase-admin";
 import ProfileCard from "@/app/ui/ProfileCard";
+import { getSections } from "@/app/lib/members";
 import {
   approveClaim,
   rejectClaim,
@@ -49,6 +50,7 @@ export default async function AdminPage() {
     })),
   );
   const pendingProfiles = profileRows.filter((p) => p.status === "pending");
+  const sections = await getSections();
   const hiddenProfiles = profileRows.filter((p) => p.status === "rejected");
 
   return (
@@ -125,6 +127,11 @@ export default async function AdminPage() {
                 <div key={p.id} className="space-y-3">
                   <p className="text-sm text-black/60 dark:text-white/60">
                     {p.email} wants to join <strong>{p.category}</strong>
+                    {!sections.includes(p.category) && (
+                      <span className="ml-2 rounded-full bg-amber-500/15 px-2 py-0.5 text-xs font-medium text-amber-700 dark:text-amber-400">
+                        New section
+                      </span>
+                    )}
                   </p>
                   <ul className="list-none">
                     <ProfileCard

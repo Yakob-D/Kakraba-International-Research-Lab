@@ -2,7 +2,8 @@
 
 import { revalidatePath } from "next/cache";
 import { createClient } from "../../lib/supabase/server";
-import { CATEGORIES } from "@/app/lib/categories";
+import { cleanSection, isHeadOfLab, OTHER_SECTION } from "@/app/lib/categories";
+import { getSections } from "@/app/lib/members";
 import { redirect } from "next/navigation";
 import { supabaseAdmin } from "@/app/lib/supabase-admin";
 import { emailAdmin } from "@/app/lib/mailer";
@@ -50,7 +51,16 @@ export async function UpdateProfile( _prevState: FormState, formData: FormData):
     const bio = String(formData.get("bio") ?? "").trim();
 
     if(!name) return { ok: false, message: "Name is a required field."};
-    if(!CATEGORIES.includes(category)) return { ok: false, message: "Pick a valid category."};
+    // Must be an existing section, or the one they're already in
+    const sections = await getSections();
+    const { data: current } = await supabase
+        .from("members")
+        .select("category")
+        .eq("user_id", user.id)
+        .maybeSingle();
+    if (!sections.includes(category) && category !== current?.category) {
+        return { ok: false, message: "Pick a section from the list." };
+    }
 
     const { error } = await supabase
         .from("members")
@@ -109,12 +119,28 @@ export async function createProfile(
     if(!user) return { ok: false, message: "You're not logging in." };
 
     const name = String(formData.get("name") ?? "").trim();
-    const category = String(formData.get("category") ?? "");
+    const choice = String(formData.get("category") ?? "");
 
     if(!name) return {ok: false, message: "Enter your full name." };
-    if (!CATEGORIES.includes(category) || category === "Head of the Lab") {
+
+    // Either an existing section, or a new one they typed under "Other"
+    const sections = await getSections();
+    let category = choice;
+    if (choice === OTHER_SECTION) {
+        const typed = cleanSection(String(formData.get("customCategory") ?? ""));
+        if (typed.length < 2 || typed.length > 60) {
+            return { ok: false, message: "Enter a section name between 2 and 60 characters." };
+        }
+        // "graduate research assistants" → reuse the existing spelling
+        const match = sections.find((s) => s.toLowerCase() === typed.toLowerCase());
+        category = match ?? typed;
+    } else if (!sections.includes(choice)) {
         return { ok: false, message: "Choose your section."};
     }
+    if (isHeadOfLab(category)) {
+        return { ok: false, message: "Choose a different section." };
+    }
+    const isNewSection = !sections.includes(category);
 
     const initials = name
     .split(/\s+/)
@@ -137,7 +163,7 @@ export async function createProfile(
     await emailAdmin(
         "[Kakraba Portal] New member waiting",
         "A new member signed up",
-        `${name} (${user.email}) created a profile in ${category}. It stays hidden until you publish it.`,
+        `${name} (${user.email}) created a profile in ${category}${isNewSection ? " (a new section they added)" : ""}. It stays hidden until you publish it.`,
     );
 
     redirect("/portal/profile");
