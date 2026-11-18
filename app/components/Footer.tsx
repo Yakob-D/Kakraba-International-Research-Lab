@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DeveloperCredit from "./DeveloperCredit";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -115,6 +116,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Kakraba International Research
             Lab. All rights reserved.
           </p>
+          <DeveloperCredit />
         </div>
       </div>
     </footer>
