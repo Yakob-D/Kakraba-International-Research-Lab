@@ -70,11 +70,16 @@ export async function POST(request: Request) {
         return Response.json({ ok: false, error: "Something went wrong. Please try again later." }, { status: 500 });
     }
 
+    // Attach the applicant's CV to the email (e.g. "Ada-Lovelace-CV.pdf")
+    const cvFileName = `${firstName}-${lastName}-CV.pdf`.replace(/[^a-zA-Z0-9.-]+/g, "-");
+    const cvContent = Buffer.from(await cv.arrayBuffer());
+
     const {error: emailError} = await resend.emails.send({
         from: "Applications <onboarding@resend.dev>",
         to: notifyEmail,
         subject: `[Kakraba Research Group] New Applicant: ${firstName} ${lastName}`,
-        text: `Name: ${firstName} ${lastName}\nEmail: ${trimmedEmail}\nReason: ${trimmedReason}\nReview the application in Supabase.`
+        text: `Name: ${firstName} ${lastName}\nEmail: ${trimmedEmail}\nHow they heard about us: ${how_did_you_hear_about_us.trim() || "Not given"}\nReason: ${trimmedReason}\n\nTheir CV is attached to this email.`,
+        attachments: [{ filename: cvFileName, content: cvContent }],
     })
     if(emailError){
         console.error(emailError);
