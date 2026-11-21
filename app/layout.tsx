@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kakraba Research Group",
-  description: "Kakraba Research Group Website",
+  title: "Kakraba Global Research Collaborative",
+  description: "Kakraba Global Research Collaborative Website",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -77,7 +77,7 @@ export async function POST(request: Request) {
     const {error: emailError} = await resend.emails.send({
         from: "Applications <onboarding@resend.dev>",
         to: notifyEmail,
-        subject: `[Kakraba Research Group] New Applicant: ${firstName} ${lastName}`,
+        subject: `[Kakraba Global Research Collaborative] New Applicant: ${firstName} ${lastName}`,
         text: `Name: ${firstName} ${lastName}\nEmail: ${trimmedEmail}\nHow they heard about us: ${how_did_you_hear_about_us.trim() || "Not given"}\nReason: ${trimmedReason}\n\nTheir CV is attached to this email.`,
         attachments: [{ filename: cvFileName, content: cvContent }],
     })

@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 text-left md:grid-cols-4 md:gap-0">
           <div className="md:border-r md:pr-10 md:mr-10 border-black/10 dark:border-white/10">
             <h2 className="text-xl font-bold">
-              Kakraba Research Group
+              Kakraba Global Research Collaborative
             </h2>
             <p className="mt-3 text-sm text-black/60 dark:text-white/60">
               Advancing artificial intelligence,
@@ -113,8 +113,8 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-black/10 dark:border-white/10 pt-6 text-sm text-black/50 dark:text-white/50 md:flex-row">
           <p>
-            &copy; {new Date().getFullYear()} Kakraba International Research
-            Lab. All rights reserved.
+            &copy; {new Date().getFullYear()} Kakraba Global Research
+            Collaborative. All rights reserved.
           </p>
           <DeveloperCredit />
         </div>

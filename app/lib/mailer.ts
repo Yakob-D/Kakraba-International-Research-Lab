@@ -53,7 +53,7 @@ function emailHtml(heading: string, body: string, button?: { label: string; url:
   <tr><td align="center">
     <table width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;background:#ffffff;border-radius:6px;padding:32px;">
       <tr><td>
-        <p style="margin:0 0 8px;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#dc2626;font-weight:bold;">Kakraba Research Group</p>
+        <p style="margin:0 0 8px;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#dc2626;font-weight:bold;">Kakraba Global Research Collaborative</p>
         <h1 style="margin:0 0 16px;font-size:22px;color:#18181b;">${escapeHtml(heading)}</h1>
         <p style="margin:0 0 24px;font-size:15px;line-height:1.5;color:#52525b;">${escapeHtml(body)}</p>
         ${buttonHtml}
@@ -78,7 +78,7 @@ export async function emailMember(
   }
   try {
     await transporter.sendMail({
-      from: `"Kakraba Research Group" <${gmailUser}>`,
+      from: `"Kakraba Global Research Collaborative" <${gmailUser}>`,
       to,
       subject,
       html: emailHtml(heading, body, button),

@@ -26,7 +26,7 @@ export default function Navbar() {
             <div className="mx-auto max-w-5xl">
                 <div className="flex items-center justify-between gap-4 rounded-xl border border-black/10 dark:border-white/20 bg-black/3 dark:bg-white/5 px-4 py-3 shadow-md backdrop-blur-xl md:justify-around">
                     <Link href="/" className="text-sm font-bold md:hidden">
-                        Kakraba Lab
+                        Kakraba Collaborative
                     </Link>
 
                     <ul className="hidden items-center justify-around md:flex md:flex-1">

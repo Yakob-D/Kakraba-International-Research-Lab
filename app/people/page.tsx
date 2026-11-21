@@ -30,7 +30,7 @@ export default async function PeoplePage() {
           Meet the Team
         </h1>
         <p className="mt-4 text-center text-base sm:text-lg leading-relaxed text-black/60 dark:text-white/60">
-          The Kakraba Research Group brings together faculty, doctoral and
+          The Kakraba Global Research Collaborative brings together faculty, doctoral and
           graduate researchers, and collaborators across biostatistics,
           computational biology, medicine, and law, united by a shared
           commitment to rigorous, reproducible, data-driven science.

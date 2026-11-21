@@ -58,7 +58,7 @@ export default function About() {
             <p className="text-base sm:text-lg leading-relaxed text-black/50 dark:text-white/50">
               The{" "}
               <span className="font-bold text-black dark:text-white">
-                Kakraba Research Group
+                Kakraba Global Research Collaborative
               </span>{" "}
               builds artificial intelligence that is rigorous, reproducible, and
               accountable to the people it serves. Led by Dr. Samuel Kakraba,
