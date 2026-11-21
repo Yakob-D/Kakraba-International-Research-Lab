@@ -2,7 +2,6 @@
 export const CATEGORIES = [
   "Head of the Lab",
   "Research Fellows",
-  "Doctoral Research Assistants",
   "Graduate Research Assistants",
   "Software Research Assistant",
   "Legal Research Assistant",

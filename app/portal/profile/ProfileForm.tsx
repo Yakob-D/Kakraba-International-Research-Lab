@@ -136,7 +136,7 @@ export default function ProfileForm({
               name="role"
               value={role}
               onChange={(e) => setRole(e.target.value)}
-              placeholder="Doctoral Research Assistant | Kakraba Global Research Collaborative"
+              placeholder="Graduate Research Assistant | Kakraba Global Research Collaborative"
               className={field}
             />
             <span className={hint}>
