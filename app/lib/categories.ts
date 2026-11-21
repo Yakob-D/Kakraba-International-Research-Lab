@@ -1,6 +1,7 @@
 // The built-in sections, in the order they appear on the People page
 export const CATEGORIES = [
   "Head of the Lab",
+  "Research Fellows",
   "Doctoral Research Assistants",
   "Graduate Research Assistants",
   "Software Research Assistant",
